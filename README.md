@@ -1,7 +1,7 @@
 ![release](https://img.shields.io/github/v/release/pasq96/IPTV-Italia) ![downloads](https://img.shields.io/github/downloads/pasq96/IPTV-Italia/total) ![size](https://img.shields.io/github/repo-size/pasq96/IPTV-Italia)
 # IPTV-Italia
-Forked by [IPTV-Italia](https://github.com/Tundrak/IPTV-Italia) (thanks to Tundrak)  
-Pluto link by [tvit](https://github.com/leicaflorian/tvit) (thanks to leicaflorian)
+Forked by [IPTV-Italia](https://github.com/Tundrak/IPTV-Italia) (grazie Tundrak)  
+Pluto link by [tvit](https://github.com/leicaflorian/tvit) (grazie leicaflorian)  
 EPG link by [epgitalia.tv](http://www.epgitalia.tv/): consiglio questi EPG
 
 Questa repository contiene tutti i link ai principali canali TV e Radio nazionali italiani in tre file m3u da aprire con un qualsiasi programma che supporti file playlist. I link sono tutti estrapolati dagli stream ufficiali, e per questo dovrebbero essere visibili legalmente soltanto all'interno dell'Italia. Intendo aggiornare i link non funzionanti o aggiungere nuovi canali se vedo commenti che lo chiedono ed è nelle mie capacità farlo legalmente.
