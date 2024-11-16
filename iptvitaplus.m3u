@@ -10,7 +10,7 @@ http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718&output=16
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709&output=16
 #EXTINF:-1 tvg-id="Rete4" tvg-chno="4" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rete4.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Rete 4
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-r4/r4-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-r4/r4-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Canale5" tvg-chno="5" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/canale5.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Canale 5
 #EXTVLCOPT:http-user-agent=Mozilla
 https://live02-seg.msf.cdn.mediaset.net/live/ch-c5/c5-clr.isml/index.m3u8
@@ -25,13 +25,13 @@ https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11223/tv8web/master.m3u8?h
 https://amg16146-wbdi-amg16146c1-samsung-it-1831.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-nove-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="20Mediaset" tvg-chno="20" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/20mediaset.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",20 Mediaset
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Rai4" tvg-chno="21" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rai4.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 4
 #EXTVLCOPT:http-user-agent=Mozilla
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966&output=16
 #EXTINF:-1 tvg-id="Iris" tvg-chno="22" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/iris.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Iris
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-ki/ki-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-ki/ki-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Rai5" tvg-chno="23" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rai5.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 5
 #EXTVLCOPT:http-user-agent=Mozilla
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276&output=16
@@ -45,14 +45,14 @@ http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992&output=16
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11219/cieloweb/master.m3u8?hdnea=st=1701861650~exp=1765449000~acl=/*~hmac=84c9f3f71e57b13c3a67afa8b29a8591ea9ed84bf786524399545d94be1ec04d
 #EXTINF:-1 tvg-id="TwentySeven" tvg-chno="27" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/twentyseven.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Twenty Seven
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-ts/ts-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-ts/ts-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="TV2000" tvg-chno="28" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/tv2000.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",TV2000
 https://hls-live-tv2000.akamaized.net/hls/live/2028510/tv2000/master.m3u8
 #EXTINF:-1 tvg-id="LA7D" tvg-chno="29" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/la7d.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",LA7d
 https://d15umi5iaezxgx.cloudfront.net/LA7D/CLN/HLS/Live.m3u8
 #EXTINF:-1 tvg-id="LA5" tvg-chno="30" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/la5.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",La 5
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-ka/ka-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-ka/ka-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="RealTime" tvg-chno="31" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/realtime.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",Real Time
 https://amg16146-wbdi-amg16146c2-samsung-it-1835.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-realtime-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="QVC" tvg-chno="32" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/qvc.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",QVC
@@ -64,7 +64,7 @@ https://amg16146-wbdi-amg16146c3-samsung-it-1836.playouts.now.amagi.tv/playlist/
 https://live02-seg.msf.cdn.mediaset.net/live/ch-b6/b6-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Focus" tvg-chno="35" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/focus.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",FOCUS
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-fu/fu-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-fu/fu-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="RTL102.5TV" tvg-chno="36" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rtl1025tv.png" tvg-country="IT" tvg-language="Italiano" group-title="Radio",RTL 102.5
 https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_video.m3u8
 #EXTINF:-1 tvg-id="WarnerTV" tvg-chno="37" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/warnertv.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",Warner TV
@@ -73,10 +73,10 @@ https://amg16146-wbdi-amg16146c4-samsung-it-1837.playouts.now.amagi.tv/playlist/
 https://amg16146-wbdi-amg16146c5-samsung-it-1838.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-giallo-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="TopCrime" tvg-chno="39" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/topcrime.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Top Crime
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-lt/lt-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-lt/lt-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Boing" tvg-chno="40" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/boing.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Boing
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-kb/kb-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-kb/kb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="K2" tvg-chno="41" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/k2.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",K2
 https://amg16146-wbdi-amg16146c6-samsung-it-1839.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-k2-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiGulp" tvg-chno="42" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/raigulp.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Gulp
@@ -89,7 +89,7 @@ http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=16
 https://amg16146-wbdi-amg16146c7-samsung-it-1840.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-frisbee-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="Cartoonito" tvg-chno="46" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/cartoonito.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Cartoonito
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Super" tvg-chno="47" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/super.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",Super!
 https://vimnitaly.akamaized.net/hls/live/2094034/super/master.m3u8
 #EXTINF:-1 tvg-id="RaiNews24" tvg-chno="48" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rainews24.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai News 24
@@ -97,12 +97,12 @@ https://vimnitaly.akamaized.net/hls/live/2094034/super/master.m3u8
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=1&output=16
 #EXTINF:-1 tvg-id="Italia2" tvg-chno="49" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/italia2.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Italia 2
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-i2/i2-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-i2/i2-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="SkyTG24" tvg-chno="50" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/skytg24.png" tvg-country="IT" tvg-language="Italiano" group-title="Sky",Sky TG24
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/12221/web/master.m3u8?hdnts=st=1701861650~exp=1765449000~acl=/*~hmac=84c9f3f71e57b13c3a67afa8b29a8591ea9ed84bf786524399545d94be1ec04d
 #EXTINF:-1 tvg-id="TGCom24" tvg-chno="51" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/tgcom24.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",TGCOM 24
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-kf/kf-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-kf/kf-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="DMAX" tvg-chno="52" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/dmax.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",DMAX
 https://amg16146-wbdi-amg16146c8-samsung-it-1841.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-dmax-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiStoria" tvg-chno="54" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/raistoria.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Storia
@@ -110,7 +110,7 @@ https://amg16146-wbdi-amg16146c8-samsung-it-1841.playouts.now.amagi.tv/playlist/
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990&output=16
 #EXTINF:-1 tvg-id="MediasetExtra" tvg-chno="55" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/mediasetextra.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Mediaset Extra
 #EXTVLCOPT:http-user-agent=Mozilla
-https://live03-col.msf.cdn.mediaset.net/live/ch-kq/kq-clr.isml/index.m3u8
+https://live02-seg.msf.cdn.mediaset.net/live/ch-kq/kq-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Home&GardenTV" tvg-chno="56" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/homegardentv.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",HGTV - Home&Garden
 https://amg16146-wbdi-amg16146c9-samsung-it-1842.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-hgtv-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiScuola" tvg-chno="57" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/raiscuola.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Scuola
