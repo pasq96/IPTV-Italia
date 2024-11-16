@@ -1,0 +1,153 @@
+#EXTINF:105 tvg-id="reality-pluto-tv" tvg-name="Reality – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/tPEOeTk.png" radio="" group-title="plutotv", Reality – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/reality-pluto-tv/stream.m3u8
+#EXTINF:106 tvg-id="super-brothers-and-sisters-pluto-tv" tvg-name="Super! Brothers and Sisters – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/KSQvVye.png" radio="" group-title="plutotv", Super! Brothers and Sisters – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/super-brothers-and-sisters-pluto-tv/stream.m3u8
+#EXTINF:107 tvg-id="film-pluto-tv" tvg-name="Film – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/QeFc7F3.png" radio="" group-title="plutotv", Film – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/film-pluto-tv/stream.m3u8
+#EXTINF:108 tvg-id="sci-fi-pluto-tv" tvg-name="Sci-Fi – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/5B94N8g.png" radio="" group-title="plutotv", Sci-Fi – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/sci-fi-pluto-tv/stream.m3u8
+#EXTINF:110 tvg-id="film-azione-pluto-tv" tvg-name="Film Azione – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/ZmAuf3H.png" radio="" group-title="plutotv", Film Azione – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/film-azione-pluto-tv/stream.m3u8
+#EXTINF:115 tvg-id="film-romantici-pluto-tv" tvg-name="Film Romantici – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/sHg0bZc.png" radio="" group-title="plutotv", Film Romantici – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/film-romantici-pluto-tv/stream.m3u8
+#EXTINF:120 tvg-id="film-thriller-pluto-tv" tvg-name="Film Thriller – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/hIWMGRW.png" radio="" group-title="plutotv", Film Thriller – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/film-thriller-pluto-tv/stream.m3u8
+#EXTINF:125 tvg-id="film-classici-pluto-tv" tvg-name="Film Classici – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/jNyZPLV.png" radio="" group-title="plutotv", Film Classici – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/film-classici-pluto-tv/stream.m3u8
+#EXTINF:130 tvg-id="cinema-italiano-pluto-tv" tvg-name="Cinema Italiano  – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/drDX5DC.png" radio="" group-title="plutotv", Cinema Italiano  – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/cinema-italiano-pluto-tv/stream.m3u8
+#EXTINF:135 tvg-id="film-commedia-pluto-tv" tvg-name="Film Commedia – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/cSKaVHW.png" radio="" group-title="plutotv", Film Commedia – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/film-commedia-pluto-tv/stream.m3u8
+#EXTINF:140 tvg-id="film-drama-pluto-tv" tvg-name="Film Drama – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/X8jimKP.png" radio="" group-title="plutotv", Film Drama – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/film-drama-pluto-tv/stream.m3u8
+#EXTINF:200 tvg-id="crime-pluto-tv" tvg-name="Crime – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/WRMGIdb.png" radio="" group-title="plutotv", Crime – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/crime-pluto-tv/stream.m3u8
+#EXTINF:300 tvg-id="serie-pluto-tv" tvg-name="Serie – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/CHBhRZr.png" radio="" group-title="plutotv", Serie – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/serie-pluto-tv/stream.m3u8
+#EXTINF:305 tvg-id="serie-teen-pluto-tv" tvg-name="Serie Teen – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/pBmsfU7.png" radio="" group-title="plutotv", Serie Teen – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/serie-teen-pluto-tv/stream.m3u8
+#EXTINF:310 tvg-id="consulenze-illegali-pluto-tv" tvg-name="Consulenze illegali – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/AoOiYJX.png" radio="" group-title="plutotv", Consulenze illegali – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/consulenze-illegali-pluto-tv/stream.m3u8
+#EXTINF:315 tvg-id="le-sorelle-mcleod-pluto-tv" tvg-name="Le sorelle mcleod – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/P310ryf.png" radio="" group-title="plutotv", Le sorelle mcleod – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/le-sorelle-mcleod-pluto-tv/stream.m3u8
+#EXTINF:320 tvg-id="mutant-x-pluto-tv" tvg-name="Mutant X – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/SptYKFI.png" radio="" group-title="plutotv", Mutant X – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/mutant-x-pluto-tv/stream.m3u8
+#EXTINF:325 tvg-id="andromeda-pluto-tv" tvg-name="Andromeda – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/2HFhwX9.png" radio="" group-title="plutotv", Andromeda – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/andromeda-pluto-tv/stream.m3u8
+#EXTINF:400 tvg-id="scherzi-e-risate-pluto-tv" tvg-name="Scherzi e risate – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/kPxGzPI.png" radio="" group-title="plutotv", Scherzi e risate – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/scherzi-e-risate-pluto-tv/stream.m3u8
+#EXTINF:405 tvg-id="fail-army-pluto-tv" tvg-name="Fail army – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/SqRDd2U.png" radio="" group-title="plutotv", Fail army – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/fail-army-pluto-tv/stream.m3u8
+#EXTINF:410 tvg-id="the-pet-collective-pluto-tv" tvg-name="The pet collective – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/034PrSz.png" radio="" group-title="plutotv", The pet collective – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/the-pet-collective-pluto-tv/stream.m3u8
+#EXTINF:415 tvg-id="just-for-laughs-pluto-tv" tvg-name="Just for laughs – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/VvEz0XX.png" radio="" group-title="plutotv", Just for laughs – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/just-for-laughs-pluto-tv/stream.m3u8
+#EXTINF:500 tvg-id="ex-on-the-beach-pluto-tv" tvg-name="Ex on the beach – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/IONkdyk.png" radio="" group-title="plutotv", Ex on the beach – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/ex-on-the-beach-pluto-tv/stream.m3u8
+#EXTINF:505 tvg-id="catfish-pluto-tv" tvg-name="Catfish – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/KajHKoP.png" radio="" group-title="plutotv", Catfish – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/catfish-pluto-tv/stream.m3u8
+#EXTINF:510 tvg-id="anime-pluto-tv" tvg-name="Anime – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/lkBlZgl.png" radio="" group-title="plutotv", Anime – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/anime-pluto-tv/stream.m3u8
+#EXTINF:515 tvg-id="il-banco-dei-pugni-pluto-tv" tvg-name="Il banco dei pugni – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/2Lj1sdf.png" radio="" group-title="plutotv", Il banco dei pugni – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/il-banco-dei-pugni-pluto-tv/stream.m3u8
+#EXTINF:520 tvg-id="16-anni-e-incinta-pluto-tv" tvg-name="16 anni e incinta – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/4BHrbP7.png" radio="" group-title="plutotv", 16 anni e incinta – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/16-anni-e-incinta-pluto-tv/stream.m3u8
+#EXTINF:525 tvg-id="dating-pluto-tv" tvg-name="Dating – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/WF2sYcY.png" radio="" group-title="plutotv", Dating – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/dating-pluto-tv/stream.m3u8
+#EXTINF:530 tvg-id="family-pluto-tv" tvg-name="Family – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/Wux4qyT.png" radio="" group-title="plutotv", Family – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/family-pluto-tv/stream.m3u8
+#EXTINF:535 tvg-id="people-are-awesome-pluto-tv" tvg-name="People are awesome – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/jn0OeWv.png" radio="" group-title="plutotv", People are awesome – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/people-are-awesome-pluto-tv/stream.m3u8
+#EXTINF:540 tvg-id="celebration-pluto-tv" tvg-name="Celebration – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/DQL9vG8.png" radio="" group-title="plutotv", Celebration – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/celebration-pluto-tv/stream.m3u8
+#EXTINF:600 tvg-id="cucina-pluto-tv" tvg-name="Cucina – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/KsOhaOn.png" radio="" group-title="plutotv", Cucina – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/cucina-pluto-tv/stream.m3u8
+#EXTINF:605 tvg-id="real-life-pluto-tv" tvg-name="Real life – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/FpwqJYw.png" radio="" group-title="plutotv", Real life – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/real-life-pluto-tv/stream.m3u8
+#EXTINF:610 tvg-id="young-and-fabulous-pluto-tv" tvg-name="Young and fabulous – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/H61Q2oO.png" radio="" group-title="plutotv", Young and fabulous – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/young-and-fabulous-pluto-tv/stream.m3u8
+#EXTINF:615 tvg-id="fashion-pluto-tv" tvg-name="Fashion – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/cC0wrqG.png" radio="" group-title="plutotv", Fashion – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/fashion-pluto-tv/stream.m3u8
+#EXTINF:650 tvg-id="clubbing-tv-pluto-tv" tvg-name="Clubbing TV – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/D5U4unl.png" radio="" group-title="plutotv", Clubbing TV – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/clubbing-tv-pluto-tv/stream.m3u8
+#EXTINF:655 tvg-id="loupe-pluto-tv" tvg-name="Loupe – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/RApNs2W.png" radio="" group-title="plutotv", Loupe – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/loupe-pluto-tv/stream.m3u8
+#EXTINF:660 tvg-id="qwest-jazzbeyond-pluto-tv" tvg-name="Qwest Jazz&Beyond – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/Ch2qOA4.png" radio="" group-title="plutotv", Qwest Jazz&Beyond – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/qwest-jazzbeyond-pluto-tv/stream.m3u8
+#EXTINF:700 tvg-id="sport-pluto-tv" tvg-name="Sport – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/o2psAYW.png" radio="" group-title="plutotv", Sport – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/sport-pluto-tv/stream.m3u8
+#EXTINF:705 tvg-id="ign-pluto-tv" tvg-name="IGN – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/9SsTKJu.png" radio="" group-title="plutotv", IGN – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/ign-pluto-tv/stream.m3u8
+#EXTINF:710 tvg-id="world-poker-tour-pluto-tv" tvg-name="World poker tour – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/AF1ON8u.png" radio="" group-title="plutotv", World poker tour – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/world-poker-tour-pluto-tv/stream.m3u8
+#EXTINF:715 tvg-id="maradona-sin-cortes-pluto-tv" tvg-name="Maradona, sin cortes – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/1BqLYel.png" radio="" group-title="plutotv", Maradona, sin cortes – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/maradona-sin-cortes-pluto-tv/stream.m3u8
+#EXTINF:720 tvg-id="fuel-tv-pluto-tv" tvg-name="FUEL TV – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/sfL6NXb.png" radio="" group-title="plutotv", FUEL TV – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/fuel-tv-pluto-tv/stream.m3u8
+#EXTINF:800 tvg-id="super-spongebob-pluto-tv" tvg-name="Super! Spongebob – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/vFiwODM.png" radio="" group-title="plutotv", Super! Spongebob – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/super-spongebob-pluto-tv/stream.m3u8
+#EXTINF:805 tvg-id="super-eroi-pluto-tv" tvg-name="Super! Eroi – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/gsX9A5b.png" radio="" group-title="plutotv", Super! Eroi – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/super-eroi-pluto-tv/stream.m3u8
+#EXTINF:810 tvg-id="super-icarly-pluto-tv" tvg-name="Super! Icarly – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/Mhl252U.png" radio="" group-title="plutotv", Super! Icarly – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/super-icarly-pluto-tv/stream.m3u8
+#EXTINF:815 tvg-id="super-pop-pluto-tv" tvg-name="Super! POP – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/jlz31HP.png" radio="" group-title="plutotv", Super! POP – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/super-pop-pluto-tv/stream.m3u8
+#EXTINF:820 tvg-id="super-star-pluto-tv" tvg-name="Super! Star – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/YLtqPkF.png" radio="" group-title="plutotv", Super! Star – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/super-star-pluto-tv/stream.m3u8
+#EXTINF:900 tvg-id="documentari-pluto-tv" tvg-name="Documentari – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/0jYrODf.png" radio="" group-title="plutotv", Documentari – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/documentari-pluto-tv/stream.m3u8
+#EXTINF:905 tvg-id="natura-pluto-tv" tvg-name="Natura – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/Pc4gx12.png" radio="" group-title="plutotv", Natura – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/natura-pluto-tv/stream.m3u8
+#EXTINF:910 tvg-id="naturescape-pluto-tv" tvg-name="Naturescape – Pluto TV" tvg-shift="" tvg-logo="https://i.imgur.com/CGB6qiV.png" radio="" group-title="plutotv", Naturescape – Pluto TV
+#EXTVLCOPT:http-user-agent=Mozilla
+http://tvit.leicaflorianrobert.dev/plutotv/naturescape-pluto-tv/stream.m3u8

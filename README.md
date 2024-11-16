@@ -1,18 +1,21 @@
-![release](https://img.shields.io/github/v/release/Tundrak/IPTV-Italia) ![downloads](https://img.shields.io/github/downloads/Tundrak/IPTV-Italia/total) ![size](https://img.shields.io/github/repo-size/Tundrak/IPTV-Italia)
+![release](https://img.shields.io/github/v/release/pasq96/IPTV-Italia) ![downloads](https://img.shields.io/github/downloads/pasq96/IPTV-Italia/total) ![size](https://img.shields.io/github/repo-size/pasq96/IPTV-Italia)
 # IPTV-Italia
+Forked by [IPTV-Italia](https://github.com/Tundrak/IPTV-Italia) (thanks to Tundrak)
+Pluto link by [tvit](https://github.com/leicaflorian/tvit) (thanks to leicaflorian)  
+
 Questa repository contiene tutti i link ai principali canali TV e Radio nazionali italiani in tre file m3u da aprire con un qualsiasi programma che supporti file playlist. I link sono tutti estrapolati dagli stream ufficiali, e per questo dovrebbero essere visibili legalmente soltanto all'interno dell'Italia. Intendo aggiornare i link non funzionanti o aggiungere nuovi canali se vedo commenti che lo chiedono ed è nelle mie capacità farlo legalmente.
 
 This repository contains all the links to the main national Italian TV and Radio channels in two m3u files to be used with any program that supports opening playlist files. The links are all extrapolated from the official streams, so they should only be legally watchable within Italy. I intend to update broken links or add new channels if I see comments asking for it and it is within my capabilities to do so legally.
 
 # Come usarla
-Apri [**questo link**](https://github.com/Tundrak/IPTV-Italia/releases) e scarica la versione più recente delle playlist. Poi aprile con il tuo Media Player preferito (ad esempio PotPlayer o MyIPTV Player).  
+Apri [**questo link**](https://github.com/pasq96/IPTV-Italia/releases) e scarica la versione più recente delle playlist. Poi aprile con il tuo Media Player preferito (ad esempio PotPlayer o MyIPTV Player).  
 **Alternativo**: copia gli indirizzi nella tabella sotto e incollali nella finestra "Apri flusso di rete" o "Apri URL" del tuo player per avere sempre le playlist più aggiornate senza dover mai scaricare nuovi file.
 (**iptvitaplus** contiene tutti i canali in iptvita, e inoltre include loghi e gruppi per i lettori più avanzati)
 
-|    **iptvita.m3u**  |   https://github.com/Tundrak/IPTV-Italia/raw/main/iptvita.m3u    |
+|    **iptvita.m3u**  |   https://github.com/pasq96/IPTV-Italia/raw/main/iptvita.m3u    |
 |--------------------:|:----------------------------------------------------------------:|
-| **iptvitaplus.m3u** | https://github.com/Tundrak/IPTV-Italia/raw/main/iptvitaplus.m3u  |
-| **ipradioita.m3u**  |  https://github.com/Tundrak/IPTV-Italia/raw/main/ipradioita.m3u  |
+| **iptvitaplus.m3u** | https://github.com/pasq96/IPTV-Italia/raw/main/iptvitaplus.m3u  |
+| **ipradioita.m3u**  |  https://github.com/pasq96/IPTV-Italia/raw/main/ipradioita.m3u  |
 
 # Cosa contiene
 Al momento i due file contengono i seguenti canali TV e radio:
@@ -30,5 +33,5 @@ Se riuscirò a trovare link ufficiali funzionanti, li aggiungerò il prima possi
 - I numeri LCN dei canali regionali non sono accurati, perchè i canali regionali cambiano numero spesso anche tra provincia e provincia
 
 # Segnala problemi e chiedi nuovi canali
-Se un qualsiasi link a un canale TV o radio non funzionasse, basta segnalarmelo aprendo un'Issue da [**questo**](https://github.com/Tundrak/IPTV-Italia/issues/new?labels=Problema&template=problema-canale.md&title=%5BProblema%5D) link (ricorda prima di controllare se qualcun altro ha già creato un'Issue con un problema simile o se il problema è già conosciuto guardando nella sezione "Problemi Noti" o nelle note delle release).  
-Inoltre, accetto richieste per nuovi canali TV o radio nazionali (soprattutto i "grandi assenti" di cui sopra), se li posso aggiungere da fonti ufficiali. Basta aprire un'Issue da [**questo**](https://github.com/Tundrak/IPTV-Italia/issues/new?labels=Richiesta+canale&template=richiesta-canale.md&title=%5BRichiesta+Canale%5D) link.
+Se un qualsiasi link a un canale TV o radio non funzionasse, basta segnalarmelo aprendo un'Issue da [**questo**](https://github.com/pasq96/IPTV-Italia/issues/new?labels=Problema&template=problema-canale.md&title=%5BProblema%5D) link (ricorda prima di controllare se qualcun altro ha già creato un'Issue con un problema simile o se il problema è già conosciuto guardando nella sezione "Problemi Noti" o nelle note delle release).  
+Inoltre, accetto richieste per nuovi canali TV o radio nazionali (soprattutto i "grandi assenti" di cui sopra), se li posso aggiungere da fonti ufficiali. Basta aprire un'Issue da [**questo**](https://github.com/pasq96/IPTV-Italia/issues/new?labels=Richiesta+canale&template=richiesta-canale.md&title=%5BRichiesta+Canale%5D) link.
