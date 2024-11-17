@@ -13,8 +13,8 @@ This repository contains all the links to the main national Italian TV and Radio
 Copia gli indirizzi nella tabella sotto e incollali nella finestra "Apri flusso di rete" o "Apri URL" del tuo player per avere sempre le playlist più aggiornate senza dover mai scaricare nuovi file.
 (**iptvitaplus** contiene tutti i canali Free-To-Air (ad esclusione dei canali PlutoTV), e inoltre include loghi e gruppi per i lettori più avanzati)
 
-|--------------------:|:----------------------------------------------------------------:|
 | **iptvitaplus.m3u** | https://github.com/pasq96/IPTV-Italia/raw/main/iptvitaplus.m3u  |
+|--------------------:|:----------------------------------------------------------------:|
 | **ipradioita.m3u**  |  https://github.com/pasq96/IPTV-Italia/raw/main/ipradioita.m3u  |
 | **ipitapluto.m3u**  |  https://github.com/pasq96/IPTV-Italia/raw/main/ipitapluto.m3u  |
 
