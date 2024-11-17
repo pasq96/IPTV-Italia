@@ -1,18 +1,18 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="Rai1.it" tvg-chno="1" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai1.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 1
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803&output=16
 #EXTINF:-1 tvg-id="Rai2.it" tvg-chno="2" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai2.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 2
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718&output=16
 #EXTINF:-1 tvg-id="Rai3.it" tvg-chno="3" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai3.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 3
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709&output=16
 #EXTINF:-1 tvg-id="Rete4.it" tvg-chno="4" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rete4.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Rete 4
-#EXTVLCOPT:http-user-agent=Mozilla
 https://live02-seg.msf.cdn.mediaset.net/live/ch-r4/r4-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Canale5.it" tvg-chno="5" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/canale5.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Canale 5
-#EXTVLCOPT:http-user-agent=Mozilla
 https://live02-seg.msf.cdn.mediaset.net/live/ch-c5/c5-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Italia1.it" tvg-chno="6" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/italia1.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Italia 1
-#EXTVLCOPT:http-user-agent=Mozilla
 https://live02-seg.msf.cdn.mediaset.net/live/ch-i1/i1-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="La7.it" tvg-chno="7" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la7.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",LA7
 https://d3749synfikwkv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-74ylxpgd78bpb/Live.m3u8
@@ -23,14 +23,18 @@ https://amg16146-wbdi-amg16146c1-samsung-it-1831.playouts.now.amagi.tv/playlist/
 #EXTINF:-1 tvg-id="20Mediaset.it" tvg-chno="20" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/20mediaset.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",20 Mediaset
 https://live02-seg.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Rai4.it" tvg-chno="21" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai4.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 4
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966&output=16
 #EXTINF:-1 tvg-id="Iris.it" tvg-chno="22" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/iris.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Iris
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ki/ki-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Rai5.it" tvg-chno="23" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai5.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 5
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276&output=16
 #EXTINF:-1 tvg-id="RaiMovie.it" tvg-chno="24" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raimovie.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Movie
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747002&output=16
 #EXTINF:-1 tvg-id="RaiPremium.it" tvg-chno="25" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raipremium.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Premium
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992&output=16
 #EXTINF:-1 tvg-id="Cielo.it" tvg-chno="26" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cielo.png" tvg-country="IT" tvg-language="Italiano" group-title="Sky",Cielo
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11219/cieloweb/master.m3u8?hdnea=st=1701861650~exp=1765449000~acl=/*~hmac=84c9f3f71e57b13c3a67afa8b29a8591ea9ed84bf786524399545d94be1ec04d
@@ -65,8 +69,10 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-kb/kb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="K2.it" tvg-chno="41" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/k2.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",K2
 https://amg16146-wbdi-amg16146c6-samsung-it-1839.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-k2-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiGulp.it" tvg-chno="42" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raigulp.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Gulp
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953&output=16
 #EXTINF:-1 tvg-id="RaiYoyo.it" tvg-chno="43" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiyoyo.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Yoyo
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=16
 #EXTINF:-1 tvg-id="Frisbee.it" tvg-chno="44" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/frisbee.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",Frisbee
 https://amg16146-wbdi-amg16146c7-samsung-it-1840.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-frisbee-samsungit/playlist.m3u8
@@ -75,6 +81,7 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Super.it" tvg-chno="47" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/super.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",Super!
 https://vimnitaly.akamaized.net/hls/live/2094034/super/master.m3u8
 #EXTINF:-1 tvg-id="RaiNews.it" tvg-chno="48" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rainews24.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai News 24
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=1&output=16
 #EXTINF:-1 tvg-id="Italia2.it" tvg-chno="49" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/italia2.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Italia 2
 https://live02-seg.msf.cdn.mediaset.net/live/ch-i2/i2-clr.isml/index.m3u8
@@ -85,14 +92,17 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-kf/kf-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="DMAX.it" tvg-chno="52" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/dmax.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",DMAX
 https://amg16146-wbdi-amg16146c8-samsung-it-1841.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-dmax-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiStoria.it" tvg-chno="54" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raistoria.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Storia
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990&output=16
 #EXTINF:-1 tvg-id="MediasetExtra.it" tvg-chno="55" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetextra.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Mediaset Extra
 https://live02-seg.msf.cdn.mediaset.net/live/ch-kq/kq-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="HGTV.it" tvg-chno="56" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/homegardentv.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",HGTV - Home&Garden
 https://amg16146-wbdi-amg16146c9-samsung-it-1842.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-hgtv-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiScuola.it" tvg-chno="57" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiscuola.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Scuola
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011&output=16
 #EXTINF:-1 tvg-id="RaiSport.it" tvg-chno="58" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raisport+hd.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Sport + HD
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025&output=16
 #EXTINF:-1 tvg-id="MotorTrend.it" tvg-chno="59" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/motortrend.png" tvg-country="IT" tvg-language="Italiano" group-title="Discovery",Motor Trend
 https://amg16146-wbdi-amg16146c10-samsung-it-1843.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-motortrend-samsungit/playlist.m3u8
@@ -122,6 +132,7 @@ https://600f07e114306.streamlock.net/PadrePioTV/livestream/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioKissKiss.it" tvg-chno="158" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/radiokisskisstv.png" tvg-country="IT" tvg-language="Italiano" group-title="Radio",Radio Kiss Kiss TV
 https://kk.fluid.stream/KKMulti/smil:KissKissTV.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiRadio2.it" tvg-chno="202" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rairadio2visual.png" tvg-country="IT" tvg-language="Italiano" group-title="Radio",Rai Radio 2
+#EXTVLCOPT:http-user-agent=rainet/4.0.5
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=5674080&output=16
 #EXTINF:-1 tvg-id="RTL1025TV.it" tvg-chno="233" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rtl1025tv.png" tvg-country="IT" tvg-language="Italiano" group-title="Radio",RTL 102.5 News
 https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S38122967/2lyQRIAAGgRR/playlist_video.m3u8
