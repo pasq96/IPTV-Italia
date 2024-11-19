@@ -7,7 +7,7 @@ https://raiuno1-dash-live.akamaized.net/dash/live/652296/raiuno1/manifest.mpd
 https://raidue1-dash-live.akamaized.net/dash/live/662448/raidue1/manifest.mpd
 #EXTINF:-1 tvg-id="Rai3.it" tvg-chno="3" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai3.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 3
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
-https://visualradiodue3-live.akamaized.net/hls/live/2034078/visualradiodue3/visualradiodue3/playlist.m3u8
+https://raisportdue1-dash-live.akamaized.net/dash/live/663973/raisportdue1/manifest.mpd
 #EXTINF:-1 tvg-id="Rete4.it" tvg-chno="4" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rete4.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Rete 4
 https://live03-col.msf.cdn.mediaset.net/live/ch-r4/r4-clr.isml/manifest_hd.mpd
 #EXTINF:-1 tvg-id="Canale5.it" tvg-chno="5" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/canale5.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Canale 5
