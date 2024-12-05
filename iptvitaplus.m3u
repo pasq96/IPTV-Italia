@@ -1,4 +1,5 @@
 #EXTM3U
+#EXTM3U x-tvg-url="http://www.epg-guide.com/it.gz"
 #EXTINF:-1 tvg-id="Rai1.it" tvg-chno="1" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai1.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 1
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
 https://raiuno3-live.akamaized.net/hls/live/2017910/raiuno3/raiuno3/playlist.m3u8
@@ -24,18 +25,18 @@ https://amg16146-wbdi-amg16146c1-samsung-it-1831.playouts.now.amagi.tv/playlist/
 https://live02-seg.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Rai4.it" tvg-chno="21" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai4.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 4
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
-https://raiquattro1-dash-live.akamaized.net/dash/live/663977/raiquattro1/manifest.mpd
+https://raiquattro3-live.akamaized.net/hls/live/2018003/raiquattro3/raiquattro3/playlist.m3u8
 #EXTINF:-1 tvg-id="Iris.it" tvg-chno="22" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/iris.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Iris
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ki/ki-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Rai5.it" tvg-chno="23" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai5.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai 5
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
-https://raicinque1-dash-live.akamaized.net/dash/live/664003/raicinque1/manifest.mpd
+https://raicinque3-live.akamaized.net/hls/live/2018007/raicinque3/raicinque3/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiMovie.it" tvg-chno="24" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raimovie.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Movie
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
-https://raimovie1-dash-live.akamaized.net/dash/live/663983/raimovie1/manifest.mpd
+https://raimovie3-live.akamaized.net/hls/live/2018010/raimovie3/raimovie3/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiPremium.it" tvg-chno="25" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raipremium.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Premium
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
-https://raipremium1-dash-live.akamaized.net/dash/live/663979/raipremium1/manifest.mpd
+https://raipremium3-live.akamaized.net/hls/live/2018013/raipremium3/raipremium3/playlist.m3u8
 #EXTINF:-1 tvg-id="Cielo.it" tvg-chno="26" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cielo.png" tvg-country="IT" tvg-language="Italiano" group-title="Sky",Cielo
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11219/cieloweb/master.m3u8?hdnea=st=1701861650~exp=1765449000~acl=/*~hmac=84c9f3f71e57b13c3a67afa8b29a8591ea9ed84bf786524399545d94be1ec04d
 #EXTINF:-1 tvg-id="TwentySeven.it" tvg-chno="27" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/twentyseven.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",27Twentyseven
@@ -70,7 +71,7 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-kb/kb-clr.isml/index.m3u8
 https://amg16146-wbdi-amg16146c6-samsung-it-1839.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-k2-samsungit/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiGulp.it" tvg-chno="42" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raigulp.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Gulp
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
-https://raigulp1-dash-live.akamaized.net/dash/live/663985/raigulp1/manifest.mpd
+https://raigulp3-live.akamaized.net/hls/live/2018015/raigulp3/raigulp3/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiYoyo.it" tvg-chno="43" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiyoyo.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai Yoyo
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
 https://raiyoyo1-dash-live.akamaized.net/dash/live/663949/raiyoyo1/manifest.mpd
@@ -79,7 +80,7 @@ https://amg16146-wbdi-amg16146c7-samsung-it-1840.playouts.now.amagi.tv/playlist/
 #EXTINF:-1 tvg-id="Cartoonito.it" tvg-chno="46" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cartoonito.png" tvg-country="IT" tvg-language="Italiano" group-title="Mediaset",Cartoonito
 https://live02-seg.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Super.it" tvg-chno="47" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/super.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",Super!
-https://vimnitaly.akamaized.net/hls/live/2094034/super/master.m3u8
+https://495c5a85d9074f29acffeaea9e0215eb.msvdn.net/super/super_main/super_main_hbbtv/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiNews.it" tvg-chno="48" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rainews24.png" tvg-country="IT" tvg-language="Italiano" group-title="Rai",Rai News 24
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
 https://rainews1-dash-live.akamaized.net/dash/live/663981/rainews1/manifest.mpd
@@ -111,7 +112,7 @@ https://sportitaliaamd.akamaized.net/live/Sportitalia/hls/F59D8EB0332E783633CDDE
 #EXTINF:-1 tvg-id="DonnaTV.it" tvg-chno="62" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/donnatv.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",Donna TV
 https://sportitaliaamd.akamaized.net/live/Donna_TV/hls/42EB42E58EA44362045EFEA804E3FCF0DB33C481/index.m3u8
 #EXTINF:-1 tvg-id="SuperTennis.it" tvg-chno="64" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/supertennis.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",Supertennis
-https://live-embed.supertennix.hiway.media/restreamer/supertennix_client/gpu-a-c0-16/restreamer/rtmp/hls/h24_supertennix/manifest.m3u8
+https://live-embed.supertennix.hiway.media/restreamer/supertennix_client/gpu-a-c0-16/restreamer/outgest/h24_supertennix/manifest.m3u8
 #EXTINF:-1 tvg-id="AlmaTv.it" tvg-chno="65" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/almatv.png" tvg-country="IT" tvg-language="Italiano" group-title="Altro",ALMA TV
 https://streaming.softwarecreation.it/AlmaTv/AlmaTv/playlist.m3u8
 #EXTINF:-1 tvg-id="Radio105TV.it" tvg-chno="66" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/radio105tv.png" tvg-country="IT" tvg-language="Italiano" group-title="Radio",Radio 105
