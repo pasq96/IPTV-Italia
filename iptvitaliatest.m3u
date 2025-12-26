@@ -94,7 +94,7 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
 https://495c5a85d9074f29acffeaea9e0215eb.msvdn.net/super/super_main/super_main_hbbtv/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiNews24.it" tvg-chno="48" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rainews24.png" group-title="Rai", Rai News 24
 #EXTVLCOPT:http-user-agent=Rainet/4.0.8
-http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=1&output=16
+https://streamcdng5-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_1200/chunklist.m3u8
 #EXTINF:-1 tvg-id="Italia2.it" tvg-chno="49" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/italia2.png" group-title="Mediaset", Italia 2
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-i2/i2-clr.isml/index.m3u8
@@ -122,14 +122,14 @@ http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025&output=16
 #EXTINF:-1 tvg-id="MotorTrendTV.it" tvg-chno="59" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/motortrend.png" group-title="Discovery", Motor Trend
 https://d205m6k582pec4.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-asg5puyzdtnqu/Motortrend_IT.m3u8
 #EXTINF:-1 tvg-id="Sportitalia.it" tvg-chno="60" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/sportitalia.png" group-title="Altro", Sportitalia
-https://amg01370-italiansportcom-sportitalia-rakuten-3hmdb.amagi.tv/hls/amagi_hls_data_rakutenAA-sportitalia-rakuten/CDN/master
+https://edge-004.streamup.eu/sportitalia/sihd_abr2/sportitalia/sihd_1080p/chunks.m3u8
 #EXTINF:-1 tvg-id="DonnaTV.it" tvg-chno="62" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/donnatv.png" group-title="Altro", Donna TV
 https://5a1178b42cc03.streamlock.net/donnatv/donnatv/chunklist_w1106847327.m3u8
 #EXTINF:-1 tvg-id="SuperTennis.it" tvg-chno="64" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/supertennis.png" group-title="Altro", Supertennis
 https://live-embed.supertennix.hiway.media/restreamer/supertennix_client/gpu-a-c0-16/restreamer/outgest/aa3673f1-e178-44a9-a947-ef41db73211a/manifest.m3u8
 #EXTINF:-1 tvg-id="AlmaTv.it" tvg-chno="65" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/almatv.png" group-title="Altro", ALMA TV
 https://5a1178b42cc03.streamlock.net/alma/alma/chunklist_w95333518.m3u8
-#EXTINF:-1 tvg-chno="61", Solocalcio
+#EXTINF:-1 tvg-id="SoloCalcio.it" tvg-chno="61", Solocalcio
 https://di-kzbhv8pw.vo.lswcdn.net/sportitalia/sisolocalcio.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Radio105TV.it" tvg-chno="66" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/radio105tv.png" group-title="Radio", Radio 105 TV
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
