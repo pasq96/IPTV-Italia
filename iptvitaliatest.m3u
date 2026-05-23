@@ -22,8 +22,10 @@ https://jmp2.uk/stvp-ITBD1500002NL
 #EXTINF:-1 tvg-id="Tv8.it" tvg-chno="8" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/tv8.png" group-title="Sky", TV8
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11223/tv8web/master.m3u8?hdnts=st=1764666351~exp=1829466206~acl=/*~hmac=b0e9165b6c55027903ad103c8219f363d8765eb300c0d9a339e9767fc3509556
 #EXTINF:-1 tvg-id="Nove.it" tvg-chno="9" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/nove.png" group-title="Discovery", Nove
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://d54or4x1qhv8g.cloudfront.net/drm/v2/license?drm-type=widevine
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ea92608afe474aea9485e5ab76dc6878:82f1f54fdc0e4a9c84dfc724fc6d5a65,ac21dbb4f0f646ec8fbda59fc53ab924:12df01146bdb685515f18b3f9380f796,052d707f2fc640a292b1548c71c4003c:aa043cb744963188ed7bec283b763d6c,94aa75fe2fca4b0891addf36760b6243:3ce405a9ffef366d05079124b1966503,fdae53ded91e4d4299accc4f0153bba9:95f1177a20f6e637d2a9c3db2ccaa901,5f2f92df28974bb3861744d420b458c9:ba3164674e98355207e0dfabcaff2900,c09bccec7f144da6b68d3d7f3f9c53bd:9cd2a48d6156bcd67aba0012a96464d2,3cb2222edfc445c6bfcd98251d980a2e:0edb8b090f2b155adabd5db806da5ffa
 https://d3pkcyie9gav9y.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jrrq3jtymmzoc/out/v1/fdb9d129ff7f4a7bbc8fe0902122e48f/HLS_CMAF_DRM/index.m3u8
 #EXTINF:-1 tvg-id="20Mediaset.it" tvg-chno="20" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/20mediaset.png" group-title="Mediaset", 20 Mediaset
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
@@ -56,11 +58,19 @@ https://viamotionhsi.netplus.ch/live/eds/la7d/browser-HLS8/la7d.m3u8
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ka/ka-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="RealTime.it" tvg-chno="31" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/realtime.png" group-title="Discovery", Real Time
-https://d3562mgijzx0zq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-kizqtzpvvl3i8/Realtime_IT.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9e148332ec644190976b3c12e59aa1d4:2a1ba25dbd50db6bd3f5c78d22374a5e,2f0e7f395ffe4ca3b13e278b7fd4fe49:0bc5b16b42987699ab5ccc427d2d3a9b,db7310d03c0f40f6a274a3a03c94a395:399ec1955e7a1c20dd4347080e080549,d94182e0384345428aca07d569ed2b59:8436677d5634c430681405dccfddbfbf
+https://d2op4s24rubfe0.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-up3xdjecl66jn/out/v1/54acbe71ddae4c9986c03fad1352bc84/HLS_CMAF_DRM/index.m3u8
 #EXTINF:-1 tvg-id="QVC.it" tvg-chno="32" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/qvc.png" group-title="Altro", QVC
 https://qrg.akamaized.net/hls/live/2017383/lsqvc1it/master.m3u8
 #EXTINF:-1 tvg-id="FoodNetwork.it" tvg-chno="33" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/foodnetwork.png" group-title="Discovery", Food Network
-https://dk3okdd5036kz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-o4pw0nc02sthz/Foodnetwork_IT.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c848095817e54150a5461fef10669889:675d439cb2aca682e94ea6a94863744b,fae1056764404b7eaa560c5ab04f025e:4af8b96a08fca5c36df1714a8bcde042,d010da2cd777413f8c042fe51dc242b0:2c2efac083c9908a53887bde81815c93,590033039d884e53aec4a2e921289b07:bcf66bdb1bd457c411a44f71c61b9708
+https://d9kc4bu8iry3b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-x4si0bflc4gq7/out/v1/dcecf7d9fd2b49c59e85a65016ddc255/HLS_CMAF_DRM/index.m3u8
 #EXTINF:-1 tvg-id="Cine34.it" tvg-chno="34" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cine34.png" group-title="Mediaset", Cine34
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-b6/b6-clr.isml/index.m3u8
@@ -70,11 +80,13 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-fu/fu-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="RTL102.5TV.it" tvg-chno="36" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rtl1025tv.png" group-title="Radio", RTL 102.5
 https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_video.m3u8
 #EXTINF:-1 tvg-id="WarnerTV.it" tvg-chno="37" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/warnertv.png" group-title="Discovery", Warner TV
-https://d24aqelmrau4kx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-l1oas691aj7p2/WBTV_IT.m3u8
+https://
 #EXTINF:-1 tvg-id="GialloTV.it" tvg-chno="38" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/giallo.png" group-title="Discovery", Giallo
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://d54or4x1qhv8g.cloudfront.net/drm/v2/license?drm-type=widevine
-https://d2iz84wnbtnuey.cloudfront.net/out/v1/8a939414e62c460a9ccab7b699ed1106/HLS_CMAF_DRM/index.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5796b9936a264399a6e7a57a673111fd:6f6e383553643d406edbcac55cf159c9,e400990becff4b918dc289a223e04081:c01ce45bfb45a39e9cd4e68f1f29cbb2,e47d3b08610441d08ad36f79e14799b8:f5221a7296f40fe6af5de182311906b1,53a634228ca045aa9b382d070985bd5c:89af33541c894bf4b080333e81f29e54
+https://d2iz84wnbtnuey.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-32xgu2ku0wsk9/out/v1/8a939414e62c460a9ccab7b699ed1106/HLS_CMAF_DRM/index.m3u8
 #EXTINF:-1 tvg-id="TopCrime.it" tvg-chno="39" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/topcrime.png" group-title="Mediaset", Top Crime
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-lt/lt-clr.isml/index.m3u8
@@ -129,7 +141,11 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990&output=7&forc
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-kq/kq-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Home&GardenTV.it" tvg-chno="56" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/homegardentv.png" group-title="Discovery", HGTV - Home&Garden
-https://d1tidto9vz737l.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-joaw4f4kh2en1/HGTV_IT.m3u8
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=72c68d5337a24e1090ace2cc5f104a3e:8b4c4a0b9121ba958ca2fba0b97dad7c,4494cdc4d7c34f9c98e9d0c27040b287:90ee1f2992f4510209e8f9cfbd469760,c501c9da44024cd4a1bdab655e1fe1fe:4d6c8fa6942845c87196eb5e0a4f641b,e50ba517c42642acba279ff855d76710:e8fe1fbaedef1b46275bd0d6abc751dd
+https://d21emhonubg8zy.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yspg3gkuqw4f2/out/v1/063d830ad098456e8c76bd198dea0122/HLS_CMAF_DRM/index.m3u8
 #EXTINF:-1 tvg-id="RaiScuola.it" tvg-chno="57" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiscuola.png" group-title="Rai", Rai Scuola
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011&output=7&forceUserAgent=raiplayappletv
@@ -137,7 +153,7 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011&output=7&forc
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025&output=7&forceUserAgent=raiplayappletv
 #EXTINF:-1 tvg-id="MotorTrendTV.it" tvg-chno="59" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/motortrend.png" group-title="Discovery", Motor Trend
-https://d205m6k582pec4.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-asg5puyzdtnqu/Motortrend_IT.m3u8
+https://
 #EXTINF:-1 tvg-id="Sportitalia.it" tvg-chno="60" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/sportitalia.png" group-title="Altro", Sportitalia
 https://edge-004.streamup.eu/sportitalia/sihd_abr2/sportitalia/sihd_1080p/chunks.m3u8
 #EXTINF:-1 tvg-id="SoloCalcio.it" tvg-chno="61", Solocalcio
