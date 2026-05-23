@@ -105,7 +105,7 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953&output=7&forc
 #EXTINF:-1 tvg-id="RaiYoyo.it" tvg-chno="43" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiyoyo.png" group-title="Rai", Rai Yoyo
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=7&forceUserAgent=raiplayappletv
-#EXTINF:-1 tvg-chno="44" tvg-id="189" tvg-name="Frisbee" tvg-logo="https://raw.githubusercontent.com/ZapprTV/channels/main/logos/frisbee" group-title="Discovery",Frisbee
+#EXTINF:-1 tvg-chno="44" tvg-id="189" tvg-name="Frisbee" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/frisbee.png" group-title="Discovery",Frisbee
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -128,7 +128,7 @@ https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/12221/web/master.m3u8?hdnt
 #EXTINF:-1 tvg-id="TGCom24.it" tvg-chno="51" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/tgcom24.png" group-title="Mediaset", TGCOM 24
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-kf/kf-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="52" tvg-id="137" tvg-name="DMAX" tvg-logo="https://raw.githubusercontent.com/ZapprTV/channels/main/logos/dmax.svg" group-title="Discovery",DMAX
+#EXTINF:-1 tvg-id="DMAX.it" tvg-chno="52" tvg-id="137" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/dmax.png" group-title="Discovery",DMAX
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
