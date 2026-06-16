@@ -86,11 +86,7 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953&output=7&forc
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=7&forceUserAgent=raiplayappletv
 #EXTINF:-1 tvg-chno="44" tvg-id="Frisbee.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/frisbee.png" group-title="Discovery",Frisbee
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=0100c4e62e71f8234dd351c39719f289:54e36b8081149f82fede8a073bb849ea,0101df8e46342feb1c3af4deb9cae20e:591e3976252c67b3d3754e05bfb18cc6,01020282919b84db71cbb1d4d9c5b8da:6f5960345613d78c9142da316514c497,010359f5430752b1a62adb5c6582b6f2:b76150e896241bcefd7f64e42fbb636e,0104cc42b23760320f22db99e1e6f7e9:07e88517d67eee6d62c06a24a0ab527f,0105b63eff2190f9c01c9b160cdd8f78:7a5dedd3b05d2f737e8ca5732611cf10
-https://alwaysdata-api.zappr.stream/frisbee.mpd
+https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/FRISBEE/CMAF/index.m3u8
 #EXTINF:-1 tvg-id="Cartoonito.it" tvg-chno="46" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cartoonito.png" group-title="Mediaset", Cartoonito
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
@@ -117,11 +113,7 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990&output=7&forc
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-kq/kq-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Home&GardenTV.it" tvg-chno="56" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/homegardentv.png" group-title="Discovery", HGTV - Home&Garden
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=72c68d5337a24e1090ace2cc5f104a3e:8b4c4a0b9121ba958ca2fba0b97dad7c,4494cdc4d7c34f9c98e9d0c27040b287:90ee1f2992f4510209e8f9cfbd469760,c501c9da44024cd4a1bdab655e1fe1fe:4d6c8fa6942845c87196eb5e0a4f641b,e50ba517c42642acba279ff855d76710:e8fe1fbaedef1b46275bd0d6abc751dd
-https://d21emhonubg8zy.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yspg3gkuqw4f2/out/v1/063d830ad098456e8c76bd198dea0122/HLS_CMAF_DRM/index.m3u8
+https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/HGTV/CMAF/index.m3u8
 #EXTINF:-1 tvg-id="RaiScuola.it" tvg-chno="57" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiscuola.png" group-title="Rai", Rai Scuola
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011&output=7&forceUserAgent=raiplayappletv
