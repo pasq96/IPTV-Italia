@@ -53,7 +53,7 @@ https://viamotionhsi.netplus.ch/live/eds/la7d/browser-HLS8/la7d.m3u8
 #EXTINF:-1 tvg-id="LA5.it" tvg-chno="30" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la5.png" group-title="Mediaset", La 5
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ka/ka-clr.isml/index.m3u8
-#EXTINF:-1 tvg-id="RealTime.it" tvg-chno="31" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/realtime.png" group-title="Discovery", Real Time
+#EXTINF:-1 tvg-id="RealTime.it" tvg-chno="31" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/realtime.png" group-title="Discovery", RealTime
 https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/REALTIME/CMAF/index.m3u8
 #EXTINF:-1 tvg-id="QVC.it" tvg-chno="32" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/qvc.png" group-title="Altro", QVC
 https://qrg.akamaized.net/hls/live/2017383/lsqvc1it/master.m3u8
@@ -77,7 +77,7 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-lt/lt-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="Boing.it" tvg-chno="40" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/boing.png" group-title="Mediaset", Boing
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live02-seg.msf.cdn.mediaset.net/live/ch-kb/kb-clr.isml/index.m3u8
-#EXTINF:-1 tvg-id="K2.it" tvg-chno="41" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/k2.svg" group-title="Discovery",K2
+#EXTINF:-1 tvg-id="K2.it" tvg-chno="41" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/k2.png" group-title="Discovery",K2
 https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/K2/CMAF/index.m3u8
 #EXTINF:-1 tvg-id="RaiGulp.it" tvg-chno="42" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raigulp.png" group-title="Rai", Rai Gulp
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
