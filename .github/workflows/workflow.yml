@@ -1,0 +1,38 @@
+name: "Update Sky Stream Tokens (iptvitaplus.m3u)"
+
+description: "Estrarre e aggiornare periodicamente i token Akamai hdnts per TV8, Cielo e Sky TG24"
+
+on:
+  schedule:
+    # Esecuzione automatica ogni 12 ore (alle 00:00 e 12:00 UTC)
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Motivo dell'esecuzione manuale'
+        required: false
+        default: 'Aggiornamento manuale token Akamai'
+
+jobs:
+  refresh-tokens:
+    name: "Refresh Akamai Tokens"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "Configurazione ambiente Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: "Esecuzione script estrazione token Sky"
+        run: python .github/scripts/.update_sky.py
+
+      - name: "Verifica e Commit delle modifiche a iptvitaplus.m3u"
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add iptvitaplus.m3u
+          git diff --quiet && git diff --staged --quiet || (git commit -m "auto(sky): update Akamai hdnts tokens in iptvitaplus.m3u [skip ci]" && git push)
