@@ -6,10 +6,14 @@ on:
       - main
     paths:
       - 'iptvitaplus.m3u'
+      - 'status.json'
+  workflow_dispatch: # Permette l'avvio manuale della Release
 
 jobs:
   build-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -20,11 +24,11 @@ jobs:
         run: echo "TAG_NAME=v$(date +'\%Y.\%m.\%d-\%H\%M')" >> $GITHUB_ENV
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_NAME }}
           name: "IPTV Italia Plus - ${{ env.TAG_NAME }}"
-          body: "Release automatica aggiornata della playlist `iptvitaplus.m3u`."
+          body: "Release automatica aggiornata della playlist `iptvitaplus.m3u` e del relativo stato canali (`status.json`)."
           draft: false
           prerelease: false
           files: |
