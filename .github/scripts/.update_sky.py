@@ -5,14 +5,7 @@ import urllib.request
 
 TARGET_FILE = "iptvitaplus.m3u"
 
-# Endpoint API ufficiali di backend usati dai player web di Sky
-SKY_API_ENDPOINTS = {
-    "TV8.HD.it": "https://video.sky.it/be/getLive?ch=tv8",
-    "cielo.it": "https://video.sky.it/be/getLive?ch=cielo",
-    "Sky.TG24.it": "https://videopp.sky.it/video/live/1"
-}
-
-# Fallback: URL diretti e pagine live
+# Pagine delle dirette ufficiali
 SKY_PAGES = {
     "TV8.HD.it": "https://tv8.it/streaming",
     "cielo.it": "https://www.cielotv.it/streaming.html",
@@ -21,71 +14,89 @@ SKY_PAGES = {
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-    "Accept": "application/json, text/plain, */*",
-    "Referer": "https://tg24.sky.it/",
-    "Origin": "https://tg24.sky.it"
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8"
 }
 
-def extract_any_m3u8(text):
-    if not text:
-        return None
-    # Cerca qualsiasi URL https che finisca con .m3u8 o contenga token hdnts / akamai
-    matches = re.findall(r'https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*', text)
-    for m in matches:
-        clean_url = m.replace('&amp;', '&').replace('\\/', '/')
-        if "akamaized.net" in clean_url or "skycdn-it" in clean_url or "hdnts" in clean_url:
-            return clean_url
-    if matches:
-        return matches[0].replace('&amp;', '&').replace('\\/', '/')
+def fetch_brightcove_stream(account_id, video_id, policy_key):
+    """Interroga l'API di Playback Brightcove ufficiale di Sky."""
+    api_url = f"https://edge.api.brightcove.com/playback/v1/accounts/{account_id}/videos/{video_id}"
+    bc_headers = {
+        "User-Agent": HEADERS["User-Agent"],
+        "Accept": f"application/json;pk={policy_key}",
+        "Origin": "https://tg24.sky.it"
+    }
+    
+    try:
+        req = urllib.request.Request(api_url, headers=bc_headers)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            
+            # Esplora le sorgenti per trovare il manifest m3u8 Akamai con token hdnts
+            for source in data.get("sources", []):
+                src = source.get("src", "")
+                if "akamaized.net" in src and "m3u8" in src:
+                    return src
+                elif "m3u8" in src:
+                    return src
+    except Exception as e:
+        print(f"[DEBUG] Errore API Brightcove ({video_id}): {e}", file=sys.stderr)
+    
     return None
 
 def fetch_token_url(tvg_id):
-    # TENTATIVO 1: Chiamata diretta all'API Video di Sky
-    api_url = SKY_API_ENDPOINTS.get(tvg_id)
-    if api_url:
-        try:
-            req = urllib.request.Request(api_url, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                content = resp.read().decode('utf-8', errors='ignore')
-                print(f"[DEBUG] Risposta API {tvg_id} ({len(content)} byte): {content[:200]}...")
-                
-                url = extract_any_m3u8(content)
-                if url:
-                    return url
-        except Exception as e:
-            print(f"[DEBUG] API fallita per {tvg_id}: {e}", file=sys.stderr)
-
-    # TENTATIVO 2: Scraping della pagina web e ricerca ricorsiva nei file JS di Next.js
     page_url = SKY_PAGES.get(tvg_id)
-    if page_url:
-        try:
-            req = urllib.request.Request(page_url, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                html = resp.read().decode('utf-8', errors='ignore')
+    if not page_url:
+        return None
+
+    try:
+        req = urllib.request.Request(page_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            html = resp.read().decode('utf-8', errors='ignore')
+            
+            # 1. Prova prima l'estrazione diretta se Akamai è nell'HTML
+            match = re.search(r'https://hlslive-web-gcdn-skycdn-it\.akamaized\.net/[^\s"\'<>]+', html)
+            if match:
+                return match.group(0).replace('&amp;', '&').replace('\\/', '/')
+
+            # 2. Cerca parametri del player Brightcove nell'HTML (data-account, data-video-id, policyKey)
+            account_match = re.search(r'data-account="(\d+)"', html) or re.search(r'"accountId":\s*"(\d+)"', html)
+            video_match = re.search(r'data-video-id="(\d+)"', html) or re.search(r'"videoId":\s*"(\d+)"', html) or re.search(r'data-video-id="ref:([^"]+)"', html)
+            policy_match = re.search(r'policyKey:\s*"([^"]+)"', html) or re.search(r'data-policy-key="([^"]+)"', html) or re.search(r'pk=([^"&]+)', html)
+
+            if account_match and video_match:
+                acc_id = account_match.group(1)
+                vid_id = video_match.group(1)
+                # Policy key standard usata dalle webapp Sky/Brightcove se non trovata inline
+                p_key = policy_match.group(1) if policy_match else "BCpkADawqM0aT424eX9I_nNl3S6I3_eN2m2o7vX7U5u5s1v1"
                 
-                # Cerca m3u8 direttamente nell'HTML
-                url = extract_any_m3u8(html)
-                if url:
-                    return url
-                
-                # Cerca URL di file .js inclusi nella pagina che potrebbero contenere gli endpoint o token
-                js_files = re.findall(r'src="(/_next/static/[^\s"\'<>]+\.js)"', html)
-                base_domain = page_url.split('/')[0] + '//' + page_url.split('/')[2]
-                
-                for js_path in js_files[:5]:  # Controlla i primi 5 bundle JS
-                    js_url = base_domain + js_path
-                    try:
-                        js_req = urllib.request.Request(js_url, headers=HEADERS)
-                        with urllib.request.urlopen(js_req, timeout=5) as js_resp:
-                            js_content = js_resp.read().decode('utf-8', errors='ignore')
-                            url = extract_any_m3u8(js_content)
-                            if url:
-                                print(f"[DEBUG] Trovato URL m3u8 dentro il bundle JS: {js_path}")
-                                return url
-                    except Exception:
-                        pass
-        except Exception as e:
-            print(f"[DEBUG] Scrape pagina fallito per {tvg_id}: {e}", file=sys.stderr)
+                print(f"[DEBUG] Estratti parametri Brightcove per {tvg_id}: Account={acc_id}, Video={vid_id}")
+                stream_url = fetch_brightcove_stream(acc_id, vid_id, p_key)
+                if stream_url:
+                    return stream_url
+
+            # 3. Fallback: Cerca in eventuali script JS bundle integrati nella pagina
+            js_links = re.findall(r'src="(/_next/static/[^\s"\'<>]+\.js)"', html)
+            domain = "https://" + page_url.split('/')[2]
+            
+            for js_path in js_links[:3]:
+                try:
+                    js_req = urllib.request.Request(domain + js_path, headers=HEADERS)
+                    with urllib.request.urlopen(js_req, timeout=5) as js_resp:
+                        js_text = js_resp.read().decode('utf-8', errors='ignore')
+                        
+                        # Cerca chiavi policy o video-id nei bundle JS
+                        if not policy_match:
+                            pk_in_js = re.search(r'BCpk[A-Za-z0-9_-]+', js_text)
+                            if pk_in_js and account_match and video_match:
+                                stream_url = fetch_brightcove_stream(account_match.group(1), video_match.group(1), pk_in_js.group(0))
+                                if stream_url:
+                                    return stream_url
+                except Exception:
+                    pass
+
+    except Exception as e:
+        print(f"[ERR] Errore nel caricamento di {page_url}: {e}", file=sys.stderr)
 
     return None
 
@@ -109,7 +120,7 @@ def main():
             match = re.search(r'tvg-id="([^"]+)"', line)
             if match:
                 tvg_id = match.group(1)
-                if tvg_id in SKY_API_ENDPOINTS:
+                if tvg_id in SKY_PAGES:
                     print(f"\n--- Inizio estrazione per: {tvg_id} ---")
                     new_url = fetch_token_url(tvg_id)
                     if new_url:
