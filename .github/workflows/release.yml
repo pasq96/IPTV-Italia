@@ -17,10 +17,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Set Release Tag
-        run: echo "TAG_NAME=v$(date +'\%Y.\%m.\%d-\%H\%M')" >> $GITHUB_ENV
+      - name: Generate Clean Release Tag
+        id: tag
+        run: |
+          CLEAN_TAG=$(python3 -c "import datetime; print('v' + datetime.datetime.now().strftime('%Y.%m.%d.%H%M'))")
+          echo "TAG_NAME=$CLEAN_TAG" >> $GITHUB_ENV
+          echo "Generated Tag: $CLEAN_TAG"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
