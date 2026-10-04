@@ -7,7 +7,7 @@ on:
     paths:
       - 'iptvitaplus.m3u'
       - 'status.json'
-  workflow_dispatch: # Permette l'avvio manuale della Release
+  workflow_dispatch:
 
 jobs:
   build-release:
@@ -20,7 +20,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set Release Tag
-        id: vars
         run: echo "TAG_NAME=v$(date +'\%Y.\%m.\%d-\%H\%M')" >> $GITHUB_ENV
 
       - name: Create GitHub Release
