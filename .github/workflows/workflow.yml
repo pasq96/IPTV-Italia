@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: "Checkout repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: "Configurazione ambiente Python"
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
 
@@ -33,4 +33,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add iptvitaplus.m3u
-          git diff --quiet && git diff --staged --quiet || (git commit -m "auto(sky): update Akamai hdnts tokens in iptvitaplus.m3u [skip ci]" && git push)
+          if git diff --staged --quiet; then
+            echo "Nessuna modifica rilevata nei token. File iptvitaplus.m3u già aggiornato."
+          else
+            echo "Nuovi token rilevati. In corso il commit ed il push..."
+            git commit -m "auto(sky): update Akamai hdnts tokens in iptvitaplus.m3u [skip ci]"
+            git push
+          fi
