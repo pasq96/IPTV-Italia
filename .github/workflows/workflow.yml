@@ -1,7 +1,5 @@
 name: "Update Sky Stream Tokens (iptvitaplus.m3u)"
 
-description: "Estrarre e aggiornare periodicamente i token Akamai hdnts per TV8, Cielo e Sky TG24"
-
 on:
   schedule:
     # Esecuzione automatica ogni 12 ore (alle 00:00 e 12:00 UTC)
@@ -9,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       reason:
-        description: 'Motivo dell'esecuzione manuale'
+        description: "Motivo dell'esecuzione manuale"
         required: false
-        default: 'Aggiornamento manuale token Akamai'
+        default: "Aggiornamento manuale token Akamai"
 
 jobs:
   refresh-tokens:
