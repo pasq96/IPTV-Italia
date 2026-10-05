@@ -162,7 +162,6 @@ def main():
         for future in futures:
             ch, is_online, status_code, active_url = future.result()
 
-            # Controlla se l'URL attivo è diverso da quello originale nella playlist
             token_refreshed = (active_url != ch["url"] and is_online)
 
             if token_refreshed:
@@ -174,14 +173,20 @@ def main():
 
             print(f"[{status_label}] Ch {ch['tvg_chno']} - {ch['name']} ({status_code})", flush=True)
 
-            status_report.append({
+            # Costruiamo il dizionario base della entry
+            entry = {
                 "chno": ch["tvg_chno"],
                 "id": ch["tvg_id"],
                 "name": ch["name"],
                 "online": is_online,
-                "status_code": status_code,
-                "token_refreshed": token_refreshed
-            })
+                "status_code": status_code
+            }
+
+            # Inserisce la chiave solo se il refresh è avvenuto davvero
+            if token_refreshed:
+                entry["token_refreshed"] = True
+
+            status_report.append(entry)
 
     if m3u_updated:
         with open(PLAYLIST_FILE, "w", encoding="utf-8") as f:
