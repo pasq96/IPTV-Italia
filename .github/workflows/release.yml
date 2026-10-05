@@ -1,0 +1,41 @@
+name: "Release IPTV Playlist"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'iptvitaplus.m3u'
+      - 'status.json'
+  workflow_dispatch:
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Generate Clean Release Tag
+        id: tag
+        run: |
+          CLEAN_TAG=$(python3 -c "import datetime; print('v' + datetime.datetime.now().strftime('%Y.%m.%d.%H%M'))")
+          echo "TAG_NAME=$CLEAN_TAG" >> $GITHUB_ENV
+          echo "Generated Tag: $CLEAN_TAG"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: "IPTV Italia Plus - ${{ env.TAG_NAME }}"
+          body: "Release automatica aggiornata della playlist `iptvitaplus.m3u` e del relativo stato canali (`status.json`)."
+          draft: false
+          prerelease: false
+          files: |
+            iptvitaplus.m3u
+            status.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
