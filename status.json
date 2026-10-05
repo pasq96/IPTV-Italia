@@ -353,8 +353,8 @@
     "chno": "66",
     "id": "Radio.105.it",
     "name": "Radio 105 TV",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 504
   },
   {
     "chno": "67",
@@ -423,8 +423,8 @@
     "chno": "257",
     "id": "Virgin.Radio.it",
     "name": "VIRGIN RADIO",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 504
   },
   {
     "chno": "258",
@@ -444,8 +444,8 @@
     "chno": "266",
     "id": "RadioZeta.it",
     "name": "RADIO ZETA",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 504
   },
   {
     "chno": "713",
@@ -458,15 +458,15 @@
     "chno": "715",
     "id": "M2OTv.it",
     "name": "M2O TV",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 504
   },
   {
     "chno": "772",
     "id": "RadioMontecarlo.it",
     "name": "Radio Montecarlo TV",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 504
   },
   {
     "chno": "800",
@@ -508,6 +508,6 @@
     "id": "RadioTvSerieA.it",
     "name": "Radio TV Serie A con RDS",
     "online": false,
-    "status_code": 403
+    "status_code": 504
   }
 ]
