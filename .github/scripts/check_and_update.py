@@ -41,12 +41,18 @@ def get_headers_for_channel(url, custom_ua=None, custom_ref=None):
     return headers
 
 def test_stream_url(url, user_agent=None, referrer=None, channel_name=""):
-    # Gestione esplicita placeholder -> 404
     if not url or "DA-INSERIRE.invalid" in url:
         return False, 404
 
-    headers = get_headers_for_channel(url, user_agent, referrer)
-    
+    # Headers per bypass WAF Akamai/Cloudflare su GitHub Actions
+    headers = {
+        "User-Agent": user_agent or "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0)",
+        "Accept": "*/*",
+        "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8",
+        "Origin": "https://www.raiplay.it" if "rai" in url.lower() else "https://mediasetinfinity.mediaset.it",
+        "Referer": referrer or ("https://www.raiplay.it/" if "rai" in url.lower() else "https://mediasetinfinity.mediaset.it/")
+    }
+
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
@@ -58,23 +64,23 @@ def test_stream_url(url, user_agent=None, referrer=None, channel_name=""):
 
     try:
         req = urllib.request.Request(url, headers=headers, method="GET")
-        with opener.open(req, timeout=8) as resp:
+        with opener.open(req, timeout=10) as resp:
             status = resp.getcode()
             return status in (200, 206, 302), status
     except urllib.error.HTTPError as e:
-        # Fallback con UA SmartTV se la CDN applica WAF/Akamai 403
+        # Se riceve 403 (tipico blocco IP GitHub Actions), riprova simulando client HbbTV generico
         if e.code == 403:
-            headers["User-Agent"] = "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36"
+            headers["User-Agent"] = "HbbTV/1.5.1 (+ETH+SmartTV; LGE; WebOS;)"
             try:
                 req_retry = urllib.request.Request(url, headers=headers, method="GET")
-                with opener.open(req_retry, timeout=8) as resp_retry:
+                with opener.open(req_retry, timeout=10) as resp_retry:
                     return resp_retry.getcode() in (200, 206, 302), resp_retry.getcode()
             except Exception:
                 pass
         return False, e.code
     except Exception:
         return False, 503
-
+    
 def parse_m3u(file_path):
     channels = []
     with open(file_path, "r", encoding="utf-8") as f:
