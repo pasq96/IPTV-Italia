@@ -53,9 +53,9 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-ts/ts-clr.isml/index.m3u8
 #EXTINF:-1 tvg-chno="28" tvg-id="TV2000.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/tv2000.png" group-title="Altro",TV2000
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://hls-live-tv2000.akamaized.net/hls/live/2028510/tv2000/master.m3u8
-#EXTINF:-1 tvg-chno="29" tvg-id="LA7.HD.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la7d.png" group-title="Altro",LA7 d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
-https://viamotionhsi.netplus.ch/live/eds/la7d/browser-dash/la7d.mpd
+#EXTINF:-1 tvg-chno="29" tvg-id="LA7d.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la7d.png" group-title="Altro",LA7d
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0)
+https://d15umi5iaezxgx.cloudfront.net/HBBTV/LA7D/DASH/Live.mpd
 #EXTINF:-1 tvg-chno="30" tvg-id="La.5.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la5.png" group-title="Mediaset",La 5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ka/ka-clr.isml/index.m3u8
@@ -147,9 +147,6 @@ https://distribution.sportitalialive.it/sportitalia/sihd_abr2/playlist.m3u8
 #EXTINF:-1 tvg-chno="61" tvg-id="SportitaliaSolocalcio.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/sportitalia.png" group-title="Altro",Sportitalia Solocalcio
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://edge-001.streamup.eu/sportitalia/sisolocalcio_abr/playlist.m3u8
-#EXTINF:-1 tvg-chno="62" tvg-id="DonnaTV.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/donnatv.png" group-title="Altro",Donna TV
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
-https://5a1178b42cc03.streamlock.net/donnatv/donnatv/chunklist_w1106847327.m3u8
 #EXTINF:-1 tvg-chno="64" tvg-id="SuperTennis.HD.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/supertennis.png" group-title="Altro",Supertennis
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live-embed.supertennix.hiway.media/restreamer/supertennix_client/gpu-a-c0-16/restreamer/outgest/aa3673f1-e178-44a9-a947-ef41db73211a/manifest.m3u8
