@@ -1,8 +1,13 @@
 name: "Check IPTV Streams and Refresh Tokens"
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'iptvitaplus.m3u'
   schedule:
-    - cron: '0 */6 * * *'  # Esecuzione ogni 6 ore
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -25,10 +30,10 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add iptvitaplus.m3u status.json
+          git add status.json
           if git diff --staged --quiet; then
             echo "Nessun aggiornamento necessario."
           else
-            git commit -m "auto: update stream status and refreshed tokens [skip ci]"
+            git commit -m "chore(status): update channel status report [skip ci]"
             git push
           fi

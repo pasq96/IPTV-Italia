@@ -1,17 +1,16 @@
 name: "Release IPTV Playlist"
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'iptvitaplus.m3u'
-      - 'status.json'
+  workflow_run:
+    workflows: ["Check IPTV Streams and Refresh Tokens"]
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
   build-release:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     permissions:
       contents: write
 
