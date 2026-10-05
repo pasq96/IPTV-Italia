@@ -507,7 +507,7 @@
     "chno": "899",
     "id": "RadioTvSerieA.it",
     "name": "Radio TV Serie A con RDS",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   }
 ]
