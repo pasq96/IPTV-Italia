@@ -127,10 +127,10 @@
   },
   {
     "chno": "29",
-    "id": "LA7.HD.it",
-    "name": "LA7 d",
-    "online": false,
-    "status_code": 0
+    "id": "LA7d.it",
+    "name": "LA7d",
+    "online": true,
+    "status_code": 200
   },
   {
     "chno": "30",
@@ -326,7 +326,7 @@
     "id": "Motor.Trend.it",
     "name": "Motor Trend",
     "online": false,
-    "status_code": 404
+    "status_code": 0
   },
   {
     "chno": "60",
@@ -341,13 +341,6 @@
     "name": "Sportitalia Solocalcio",
     "online": true,
     "status_code": 200
-  },
-  {
-    "chno": "62",
-    "id": "DonnaTV.it",
-    "name": "Donna TV",
-    "online": false,
-    "status_code": 404
   },
   {
     "chno": "64",
