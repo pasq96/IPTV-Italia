@@ -23,6 +23,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Installa ffmpeg e ffprobe
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
       - name: Esecuzione script di verifica e update
         run: python .github/scripts/check_and_update.py
 
