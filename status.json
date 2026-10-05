@@ -10,36 +10,36 @@
     "chno": "2",
     "id": "Rai2.it",
     "name": "Rai 2",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "3",
     "id": "Rai3.it",
     "name": "Rai 3",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "4",
     "id": "Rete.4.it",
     "name": "Rete 4",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "5",
     "id": "Canale.5.it",
     "name": "Canale 5",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "6",
     "id": "Italia.1.it",
     "name": "Italia 1",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "7",
@@ -52,8 +52,8 @@
     "chno": "8",
     "id": "TV8.HD.it",
     "name": "TV8",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "9",
@@ -66,8 +66,8 @@
     "chno": "20",
     "id": "20.it",
     "name": "20 Mediaset",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "21",
@@ -80,8 +80,8 @@
     "chno": "22",
     "id": "Iris.it",
     "name": "Iris",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "23",
@@ -108,15 +108,15 @@
     "chno": "26",
     "id": "cielo.it",
     "name": "Cielo",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "27",
     "id": "27.Twentyseven.it",
     "name": "Twenty Seven",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "28",
@@ -136,8 +136,8 @@
     "chno": "30",
     "id": "La.5.it",
     "name": "La 5",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "31",
@@ -164,15 +164,15 @@
     "chno": "34",
     "id": "Cine34.it",
     "name": "Cine34",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "35",
     "id": "Focus.it",
     "name": "FOCUS",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "36",
@@ -199,15 +199,15 @@
     "chno": "39",
     "id": "Top.Crime.it",
     "name": "Top Crime",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "40",
     "id": "Boing.it",
     "name": "Boing",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "41",
@@ -241,8 +241,8 @@
     "chno": "46",
     "id": "Cartoonito.it",
     "name": "Cartoonito",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "47",
@@ -262,22 +262,22 @@
     "chno": "49",
     "id": "Italia.2.it",
     "name": "Italia 2",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "50",
     "id": "Sky.TG24.it",
     "name": "Sky TG24",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "51",
     "id": "TGCom.it",
     "name": "TGCOM 24",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "52",
@@ -297,8 +297,8 @@
     "chno": "55",
     "id": "Mediaset.Extra.it",
     "name": "Mediaset Extra",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "56",
@@ -332,8 +332,8 @@
     "chno": "60",
     "id": "Sportitalia.it",
     "name": "Sportitalia",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "61",
@@ -346,8 +346,8 @@
     "chno": "64",
     "id": "SuperTennis.HD.it",
     "name": "Supertennis",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "66",
@@ -409,8 +409,8 @@
     "chno": "210",
     "id": "Rai4K.it",
     "name": "Rai 4k",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 403
   },
   {
     "chno": "233",
