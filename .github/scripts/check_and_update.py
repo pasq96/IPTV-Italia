@@ -12,6 +12,9 @@ HEADERS_BASE = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
     "Accept": "*/*",
     "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "cross-site",
     "Connection": "keep-alive"
 }
 
@@ -25,7 +28,6 @@ def get_headers_for_channel(url, custom_ua=None, custom_ref=None):
     elif "rai.it" in url_lower or "raiplay" in url_lower or "monterosa" in url_lower:
         headers["Referer"] = "https://www.raiplay.it/"
         headers["Origin"] = "https://www.raiplay.it"
-        headers["User-Agent"] = "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36"
     elif "discovery" in url_lower or "dmax" in url_lower or "realtime" in url_lower:
         headers["Referer"] = "https://www.discoveryplus.com/"
     elif "cloudfront" in url_lower or "la7" in url_lower:
@@ -39,8 +41,9 @@ def get_headers_for_channel(url, custom_ua=None, custom_ref=None):
     return headers
 
 def test_stream_url(url, user_agent=None, referrer=None, channel_name=""):
+    # Gestione esplicita placeholder -> 404
     if not url or "DA-INSERIRE.invalid" in url:
-        return False, 0
+        return False, 404
 
     headers = get_headers_for_channel(url, user_agent, referrer)
     
@@ -57,11 +60,11 @@ def test_stream_url(url, user_agent=None, referrer=None, channel_name=""):
         req = urllib.request.Request(url, headers=headers, method="GET")
         with opener.open(req, timeout=8) as resp:
             status = resp.getcode()
-            # Verifica che risponda 200/206/302
             return status in (200, 206, 302), status
     except urllib.error.HTTPError as e:
+        # Fallback con UA SmartTV se la CDN applica WAF/Akamai 403
         if e.code == 403:
-            headers["User-Agent"] = "Mozilla/5.0 (Linux; Android 9; SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.181 Safari/537.36"
+            headers["User-Agent"] = "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36"
             try:
                 req_retry = urllib.request.Request(url, headers=headers, method="GET")
                 with opener.open(req_retry, timeout=8) as resp_retry:
@@ -70,7 +73,7 @@ def test_stream_url(url, user_agent=None, referrer=None, channel_name=""):
                 pass
         return False, e.code
     except Exception:
-        return False, 0
+        return False, 503
 
 def parse_m3u(file_path):
     channels = []
