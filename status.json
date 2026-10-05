@@ -214,7 +214,7 @@
     "id": "K2.it",
     "name": "K2",
     "online": false,
-    "status_code": 0
+    "status_code": 404
   },
   {
     "chno": "42",
@@ -235,7 +235,7 @@
     "id": "Frisbee.it",
     "name": "Frisbee",
     "online": false,
-    "status_code": 0
+    "status_code": 404
   },
   {
     "chno": "46",
@@ -326,7 +326,7 @@
     "id": "Motor.Trend.it",
     "name": "Motor Trend",
     "online": false,
-    "status_code": 0
+    "status_code": 404
   },
   {
     "chno": "60",
