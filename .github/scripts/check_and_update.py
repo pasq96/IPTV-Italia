@@ -1,86 +1,61 @@
 import json
 import re
-import ssl
+import subprocess
 import sys
-import urllib.error
-import urllib.request
 
 PLAYLIST_FILE = "iptvitaplus.m3u"
 STATUS_FILE = "status.json"
 
-HEADERS_BASE = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-    "Accept": "*/*",
-    "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8",
-    "Sec-Fetch-Dest": "empty",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Site": "cross-site",
-    "Connection": "keep-alive"
-}
-
-def get_headers_for_channel(url, custom_ua=None, custom_ref=None):
-    headers = HEADERS_BASE.copy()
-    url_lower = url.lower()
-
-    if "mediaset" in url_lower or "hbbtv.mediaset.it" in url_lower or "live3" in url_lower:
-        headers["Referer"] = "https://mediasetinfinity.mediaset.it/"
-        headers["Origin"] = "https://mediasetinfinity.mediaset.it"
-    elif "rai.it" in url_lower or "raiplay" in url_lower or "monterosa" in url_lower:
-        headers["Referer"] = "https://www.raiplay.it/"
-        headers["Origin"] = "https://www.raiplay.it"
-    elif "discovery" in url_lower or "dmax" in url_lower or "realtime" in url_lower:
-        headers["Referer"] = "https://www.discoveryplus.com/"
-    elif "cloudfront" in url_lower or "la7" in url_lower:
-        headers["User-Agent"] = "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0)"
-
-    if custom_ua:
-        headers["User-Agent"] = custom_ua
-    if custom_ref:
-        headers["Referer"] = custom_ref
-
-    return headers
-
 def test_stream_url(url, user_agent=None, referrer=None, channel_name=""):
+    # Gestione esplicita dei placeholder
     if not url or "DA-INSERIRE.invalid" in url:
         return False, 404
 
-    # Headers per bypass WAF Akamai/Cloudflare su GitHub Actions
-    headers = {
-        "User-Agent": user_agent or "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0)",
-        "Accept": "*/*",
-        "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8",
-        "Origin": "https://www.raiplay.it" if "rai" in url.lower() else "https://mediasetinfinity.mediaset.it",
-        "Referer": referrer or ("https://www.raiplay.it/" if "rai" in url.lower() else "https://mediasetinfinity.mediaset.it/")
-    }
+    # Costruzione comando ffprobe
+    command = [
+        "ffprobe",
+        "-hide_banner",
+        "-loglevel", "error",
+        "-timeout", "8000000"  # Timeout di 8 secondi in microsecondi
+    ]
 
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
+    # Aggiunta dell'User-Agent personalizzato se presente
+    ua = user_agent or "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0)"
+    command.extend(["-user_agent", ua])
 
-    opener = urllib.request.build_opener(
-        urllib.request.HTTPSHandler(context=ctx),
-        urllib.request.HTTPCookieProcessor()
-    )
+    # Aggiunta degli header personalizzati (es. Referer)
+    url_lower = url.lower()
+    if referrer:
+        command.extend(["-headers", f"Referer: {referrer}\r\n"])
+    elif "rai" in url_lower:
+        command.extend(["-headers", "Referer: https://www.raiplay.it/\r\n"])
+    elif "mediaset" in url_lower:
+        command.extend(["-headers", "Referer: https://mediasetinfinity.mediaset.it/\r\n"])
+
+    command.extend(["-i", url])
 
     try:
-        req = urllib.request.Request(url, headers=headers, method="GET")
-        with opener.open(req, timeout=10) as resp:
-            status = resp.getcode()
-            return status in (200, 206, 302), status
-    except urllib.error.HTTPError as e:
-        # Se riceve 403 (tipico blocco IP GitHub Actions), riprova simulando client HbbTV generico
-        if e.code == 403:
-            headers["User-Agent"] = "HbbTV/1.5.1 (+ETH+SmartTV; LGE; WebOS;)"
-            try:
-                req_retry = urllib.request.Request(url, headers=headers, method="GET")
-                with opener.open(req_retry, timeout=10) as resp_retry:
-                    return resp_retry.getcode() in (200, 206, 302), resp_retry.getcode()
-            except Exception:
-                pass
-        return False, e.code
+        result = subprocess.run(
+            command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=10
+        )
+        
+        if result.returncode == 0:
+            return True, 200
+        else:
+            stderr_str = result.stderr.decode("utf-8", errors="ignore")
+            if "403 Forbidden" in stderr_str:
+                return False, 403
+            elif "404 Not Found" in stderr_str:
+                return False, 404
+            return False, 503
+    except subprocess.TimeoutExpired:
+        return False, 504
     except Exception:
         return False, 503
-    
+
 def parse_m3u(file_path):
     channels = []
     with open(file_path, "r", encoding="utf-8") as f:
@@ -123,13 +98,13 @@ def main():
     channels, raw_lines = parse_m3u(PLAYLIST_FILE)
     status_report = []
 
-    print(f"Verifica avanzata di {len(channels)} canali in corso...")
+    print(f"Verifica avanzata di {len(channels)} canali con ffprobe in corso...")
 
     for ch in channels:
         is_online, status_code = test_stream_url(
             ch["url"], 
-            ch["user_agent"], 
-            ch["referrer"], 
+            ch.get("user_agent"), 
+            ch.get("referrer"), 
             ch["name"]
         )
 
