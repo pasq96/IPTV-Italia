@@ -1,46 +1,36 @@
 import json
 import re
-import urllib.request
-import urllib.error
+import ssl
 import sys
+import urllib.error
+import urllib.request
 
 PLAYLIST_FILE = "iptvitaplus.m3u"
 STATUS_FILE = "status.json"
 
-# Header predefiniti per bypassare i controlli CDN dei principali network italiani
-NETWORK_HEADERS = {
-    "mediaset": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-        "Referer": "https://mediasetinfinity.mediaset.it/",
-        "Origin": "https://mediasetinfinity.mediaset.it"
-    },
-    "rai": {
-        "User-Agent": "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)",
-        "Referer": "https://www.raiplay.it/"
-    },
-    "discovery": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-        "Referer": "https://www.discoveryplus.com/"
-    },
-    "default": {
-        "User-Agent": "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)"
-    }
+HEADERS_BASE = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "Accept": "*/*",
+    "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Connection": "keep-alive"
 }
 
-def get_headers_for_url(url, custom_ua=None, custom_ref=None):
-    headers = {}
+def get_headers_for_channel(url, custom_ua=None, custom_ref=None):
+    headers = HEADERS_BASE.copy()
     url_lower = url.lower()
 
-    if "mediaset" in url_lower or "hbbtv.mediaset.it" in url_lower:
-        headers.update(NETWORK_HEADERS["mediaset"])
-    elif "rai.it" in url_lower or "raiplay" in url_lower:
-        headers.update(NETWORK_HEADERS["rai"])
-    elif "discovery" in url_lower or "dmax" in url_lower or "realtime" in url_lower:
-        headers.update(NETWORK_HEADERS["discovery"])
-    else:
-        headers.update(NETWORK_HEADERS["default"])
+    if "mediaset" in url_lower or "hbbtv.mediaset.it" in url_lower or "live3" in url_lower:
+        headers["Referer"] = "https://mediasetinfinity.mediaset.it/"
+        headers["Origin"] = "https://mediasetinfinity.mediaset.it"
+    elif "rai.it" in url_lower or "raiplay" in url_lower or "monterosa" in url_lower:
+        headers["Referer"] = "https://www.raiplay.it/"
+        headers["Origin"] = "https://www.raiplay.it"
+        headers["User-Agent"] = "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36"
+    elif "discovery" in url_lower or "dmax" in url_lower or "realtime" in url_lower or "amagi" in url_lower:
+        headers["Referer"] = "https://www.discoveryplus.com/"
+    elif "cloudfront" in url_lower or "la7" in url_lower:
+        headers["User-Agent"] = "Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0)"
 
-    # Se la playlist M3U ha una direttiva specifica (#EXTVLCOPT), sovrascrivi
     if custom_ua:
         headers["User-Agent"] = custom_ua
     if custom_ref:
@@ -52,14 +42,31 @@ def test_stream_url(url, user_agent=None, referrer=None):
     if not url or "DA-INSERIRE.invalid" in url:
         return False, 0
 
-    headers = get_headers_for_url(url, user_agent, referrer)
+    headers = get_headers_for_channel(url, user_agent, referrer)
+    
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
+    opener = urllib.request.build_opener(
+        urllib.request.HTTPSHandler(context=ctx),
+        urllib.request.HTTPCookieProcessor()
+    )
 
     try:
-        # Inviamo una richiesta GET per verificare se la CDN risponde correttamente
         req = urllib.request.Request(url, headers=headers, method="GET")
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            return resp.status in (200, 206, 302), resp.status
+        with opener.open(req, timeout=10) as resp:
+            status = resp.getcode()
+            return status in (200, 206, 302), status
     except urllib.error.HTTPError as e:
+        if e.code == 403:
+            headers["User-Agent"] = "Mozilla/5.0 (Linux; Android 9; SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.181 Safari/537.36"
+            try:
+                req_retry = urllib.request.Request(url, headers=headers, method="GET")
+                with opener.open(req_retry, timeout=8) as resp_retry:
+                    return resp_retry.getcode() in (200, 206, 302), resp_retry.getcode()
+            except Exception:
+                pass
         return False, e.code
     except Exception:
         return False, 0
@@ -106,7 +113,7 @@ def main():
     channels, raw_lines = parse_m3u(PLAYLIST_FILE)
     status_report = []
 
-    print(f"Verifica di {len(channels)} canali con header di rete personalizzati...")
+    print(f"Verifica avanzata di {len(channels)} canali in corso...")
 
     for ch in channels:
         is_online, status_code = test_stream_url(ch["url"], ch["user_agent"], ch["referrer"])
