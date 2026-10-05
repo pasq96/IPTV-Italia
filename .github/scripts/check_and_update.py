@@ -162,18 +162,25 @@ def main():
         for future in futures:
             ch, is_online, status_code, active_url = future.result()
 
-            print(f"[{'ONLINE' if is_online else 'OFFLINE'}] Ch {ch['tvg_chno']} - {ch['name']} ({status_code})", flush=True)
+            # Controlla se l'URL attivo è diverso da quello originale nella playlist
+            token_refreshed = (active_url != ch["url"] and is_online)
 
-            if active_url != ch["url"] and is_online:
+            if token_refreshed:
+                status_label = "ONLINE + TOKEN REFRESHED"
                 raw_lines[ch["line_idx"] + 1] = active_url + "\n"
                 m3u_updated = True
+            else:
+                status_label = "ONLINE" if is_online else "OFFLINE"
+
+            print(f"[{status_label}] Ch {ch['tvg_chno']} - {ch['name']} ({status_code})", flush=True)
 
             status_report.append({
                 "chno": ch["tvg_chno"],
                 "id": ch["tvg_id"],
                 "name": ch["name"],
                 "online": is_online,
-                "status_code": status_code
+                "status_code": status_code,
+                "token_refreshed": token_refreshed
             })
 
     if m3u_updated:
