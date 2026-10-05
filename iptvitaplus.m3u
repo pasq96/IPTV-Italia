@@ -89,18 +89,18 @@ https://live02-seg.msf.cdn.mediaset.net/live/ch-lt/lt-clr.isml/index.m3u8
 #EXTINF:-1 tvg-chno="40" tvg-id="Boing.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/boing.png" group-title="Mediaset",Boing
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-kb/kb-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="41" tvg-id="K2.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/k2.png" group-title="Discovery",K2
+#EXTINF:-1 tvg-chno="41" tvg-id="K2.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/k2.png" group-title="Bambini",K2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
-https://DA-INSERIRE.invalid/
+https://DA-INSERIRE.invalid/k2/master.m3u8
 #EXTINF:-1 tvg-chno="42" tvg-id="RaiGulp.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raigulp.png" group-title="Rai",Rai Gulp
 #EXTVLCOPT:http-user-agent=raiplayappletv
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953&output=7&forceUserAgent=raiplayappletv
 #EXTINF:-1 tvg-chno="43" tvg-id="RaiYoyo.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiyoyo.png" group-title="Rai",Rai Yoyo
 #EXTVLCOPT:http-user-agent=raiplayappletv
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=7&forceUserAgent=raiplayappletv
-#EXTINF:-1 tvg-chno="44" tvg-id="Frisbee.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/frisbee.png" group-title="Discovery",Frisbee
+#EXTINF:-1 tvg-chno="44" tvg-id="Frisbee.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/frisbee.png" group-title="Bambini",Frisbee
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
-https://DA-INSERIRE.invalid/
+https://DA-INSERIRE.invalid/frisbee/master.m3u8
 #EXTINF:-1 tvg-chno="46" tvg-id="Cartoonito.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cartoonito.png" group-title="Mediaset",Cartoonito
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
@@ -137,9 +137,9 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011&output=7&forc
 #EXTINF:-1 tvg-chno="58" tvg-id="RaiSport.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raisporthd.png" group-title="Rai",Rai Sport + HD
 #EXTVLCOPT:http-user-agent=raiplayappletv
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025&output=7&forceUserAgent=raiplayappletv
-#EXTINF:-1 tvg-chno="59" tvg-id="Motor.Trend.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/motortrend.png" group-title="Discovery",Motor Trend
+#EXTINF:-1 tvg-chno="59" tvg-id="Motor.Trend.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/motortrend.png" group-title="Documentari",Motor Trend
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
-https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/MOTORTREND/CMAF/index.m3u8
+https://DA-INSERIRE.invalid/motortrend/master.m3u8
 #EXTINF:-1 tvg-chno="60" tvg-id="Sportitalia.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/sportitalia.png" group-title="Altro",Sportitalia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 #EXTVLCOPT:http-referrer=https://sportitalialive.it/
