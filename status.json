@@ -4,583 +4,510 @@
     "id": "Rai1.it",
     "name": "Rai 1",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "2",
     "id": "Rai2.it",
     "name": "Rai 2",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "3",
     "id": "Rai3.it",
     "name": "Rai 3",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "4",
     "id": "Rete.4.it",
     "name": "Rete 4",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "5",
     "id": "Canale.5.it",
     "name": "Canale 5",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "6",
     "id": "Italia.1.it",
     "name": "Italia 1",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "7",
     "id": "LA7.HD.it",
     "name": "LA7",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "8",
     "id": "TV8.HD.it",
     "name": "TV8",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "9",
     "id": "Nove.it",
     "name": "Nove",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "20",
     "id": "20.it",
     "name": "20 Mediaset",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "21",
     "id": "Rai4.it",
     "name": "Rai 4",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "22",
     "id": "Iris.it",
     "name": "Iris",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "23",
     "id": "Rai5.it",
     "name": "Rai 5",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "24",
     "id": "RaiMovie.it",
     "name": "Rai Movie",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "25",
     "id": "RaiPremium.it",
     "name": "Rai Premium",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "26",
     "id": "cielo.it",
     "name": "Cielo",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "27",
     "id": "27.Twentyseven.it",
     "name": "Twenty Seven",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "28",
     "id": "TV2000.it",
     "name": "TV2000",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "29",
     "id": "LA7d.it",
     "name": "LA7d",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "30",
     "id": "La.5.it",
     "name": "La 5",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "31",
     "id": "Real.Time.it",
     "name": "RealTime",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "32",
     "id": "QVC.it",
     "name": "QVC",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "33",
     "id": "Food.Network.it",
     "name": "Food Network",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "34",
     "id": "Cine34.it",
     "name": "Cine34",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "35",
     "id": "Focus.it",
     "name": "FOCUS",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "36",
     "id": "RTL.102.5.HD.it",
     "name": "RTL 102.5",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "37",
     "id": "Discovery.Channel.it",
     "name": "Discovery Channel",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "38",
     "id": "Giallo.TV.it",
     "name": "Giallo",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "39",
     "id": "Top.Crime.it",
     "name": "Top Crime",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "40",
     "id": "Boing.it",
     "name": "Boing",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "41",
     "id": "K2.it",
     "name": "K2",
     "online": false,
-    "status_code": 404,
-    "token_refreshed": false
+    "status_code": 404
   },
   {
     "chno": "42",
     "id": "RaiGulp.it",
     "name": "Rai Gulp",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "43",
     "id": "RaiYoyo.it",
     "name": "Rai Yoyo",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "44",
     "id": "Frisbee.it",
     "name": "Frisbee",
     "online": false,
-    "status_code": 404,
-    "token_refreshed": false
+    "status_code": 404
   },
   {
     "chno": "46",
     "id": "Cartoonito.it",
     "name": "Cartoonito",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "47",
     "id": "Super!.it",
     "name": "Super!",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "48",
     "id": "RaiNews24.it",
     "name": "Rai News 24",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "49",
     "id": "Italia.2.it",
     "name": "Italia 2",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "50",
     "id": "Sky.TG24.it",
     "name": "Sky TG24",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "51",
     "id": "TGCom.it",
     "name": "TGCOM 24",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "52",
     "id": "DMAX.it",
     "name": "DMAX",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "54",
     "id": "RaiStoria.it",
     "name": "Rai Storia",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "55",
     "id": "Mediaset.Extra.it",
     "name": "Mediaset Extra",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "56",
     "id": "HGTV.it",
     "name": "HGTV - Home&Garden",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "57",
     "id": "RaiScuola.it",
     "name": "Rai Scuola",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "58",
     "id": "RaiSport.it",
     "name": "Rai Sport + HD",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "59",
     "id": "Motor.Trend.it",
     "name": "Motor Trend",
     "online": false,
-    "status_code": 404,
-    "token_refreshed": false
+    "status_code": 404
   },
   {
     "chno": "60",
     "id": "Sportitalia.it",
     "name": "Sportitalia",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "61",
     "id": "SportitaliaSolocalcio.it",
     "name": "Sportitalia Solocalcio",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "64",
     "id": "SuperTennis.HD.it",
     "name": "Supertennis",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "66",
     "id": "Radio.105.it",
     "name": "Radio 105 TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "67",
     "id": "R101TV.it",
     "name": "R101 TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "68",
     "id": "BOMChannel.it",
     "name": "BOM CHANNEL",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "69",
     "id": "Deejay.TV.it",
     "name": "Deejay TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "70",
     "id": "Radio.Italia.TV.HD.it",
     "name": "RadioItaliaTV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "71",
     "id": "RadioIbizaTV.it",
     "name": "Radio Ibiza TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "158",
     "id": "RadioKissKiss.it",
     "name": "RADIO KISS KISS TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "202",
     "id": "RaiRadio2.it",
     "name": "Rai Radio 2",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "210",
     "id": "Rai4K.it",
     "name": "Rai 4k",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "233",
     "id": "RTL1025Napule.it",
     "name": "RTL 102.5 Napulè",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "257",
     "id": "Virgin.Radio.it",
     "name": "VIRGIN RADIO",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "258",
     "id": "RADIOFRECCIA.HD.it",
     "name": "RADIOFRECCIA",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "265",
     "id": "RDSSocialTV.it",
     "name": "RDS Social TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "266",
     "id": "RadioZeta.it",
     "name": "RADIO ZETA",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "713",
     "id": "RadioCapitalTv.it",
     "name": "Radio Capital TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "715",
     "id": "M2OTv.it",
     "name": "M2O TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "772",
     "id": "RadioMontecarlo.it",
     "name": "Radio Montecarlo TV",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "800",
     "id": "",
     "name": "Rai Italia Asia e Australia",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "801",
     "id": "",
     "name": "Rai Italia Europa e Africa",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "802",
     "id": "RaiItaliaAmerica.it",
     "name": "Rai Italia Nord America",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "803",
     "id": "",
     "name": "Rai Italia Sud America",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "804",
     "id": "",
     "name": "Rai World Premium",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   },
   {
     "chno": "899",
     "id": "RadioTvSerieA.it",
     "name": "Radio TV Serie A con RDS",
     "online": true,
-    "status_code": 200,
-    "token_refreshed": false
+    "status_code": 200
   }
 ]
