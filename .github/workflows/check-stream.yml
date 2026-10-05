@@ -1,0 +1,59 @@
+name: "Check IPTV Streams and Refresh Tokens"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'iptvitaplus.m3u'
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-and-refresh:
+    runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: "--no-deprecation"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configurazione ambiente Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache dei pacchetti APT per ffmpeg
+        id: cache-ffmpeg
+        uses: actions/cache@v4
+        with:
+          path: .apt-cache
+          key: ${{ runner.os }}-apt-ffmpeg-v1
+
+      - name: Installa ffmpeg e ffprobe
+        run: |
+          mkdir -p .apt-cache
+          sudo apt-get update
+          sudo apt-get install -y -o Dir::Cache::Archives="$PWD/.apt-cache" ffmpeg
+          # Rimuove i file protetti da root (lock e partial) e cambia la proprietà dei .deb all'utente runner
+          sudo rm -rf .apt-cache/lock .apt-cache/partial
+          sudo chown -R $USER:$USER .apt-cache
+
+      - name: Esecuzione script di verifica e update
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python .github/scripts/check_and_update.py
+
+      - name: Commit e Push delle modifiche
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add status.json iptvitaplus.m3u
+          if git diff --staged --quiet; then
+            echo "Nessun aggiornamento necessario."
+          else
+            git commit -m "auto: update stream status and refreshed tokens [skip ci]"
+            git push origin main
+          fi
