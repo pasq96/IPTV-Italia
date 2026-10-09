@@ -323,10 +323,10 @@
   },
   {
     "chno": "59",
-    "id": "Motor.Trend.it",
-    "name": "Motor Trend",
-    "online": false,
-    "status_code": 404
+    "id": "Discovery.Turbo.it",
+    "name": "Discovery Turbo",
+    "online": true,
+    "status_code": 200
   },
   {
     "chno": "60",
