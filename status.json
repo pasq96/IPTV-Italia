@@ -343,6 +343,13 @@
     "status_code": 200
   },
   {
+    "chno": "62",
+    "id": "DonnaTV.it",
+    "name": "Donna TV",
+    "online": true,
+    "status_code": 200
+  },
+  {
     "chno": "64",
     "id": "SuperTennis.HD.it",
     "name": "Supertennis",
@@ -392,6 +399,20 @@
     "status_code": 200
   },
   {
+    "chno": "89",
+    "id": "SenatoTV.it",
+    "name": "Senato TV",
+    "online": true,
+    "status_code": 200
+  },
+  {
+    "chno": "90",
+    "id": "CameradeiDeputati.it",
+    "name": "Camera dei Deputati",
+    "online": true,
+    "status_code": 200
+  },
+  {
     "chno": "158",
     "id": "RadioKissKiss.it",
     "name": "RADIO KISS KISS TV",
@@ -408,7 +429,7 @@
   {
     "chno": "210",
     "id": "Rai4K.it",
-    "name": "Rai 4k",
+    "name": "Rai 4K",
     "online": true,
     "status_code": 200
   },
@@ -420,9 +441,16 @@
     "status_code": 200
   },
   {
+    "chno": "246",
+    "id": "Radio24TV.it",
+    "name": "Radio24-IlSole24OreTV",
+    "online": true,
+    "status_code": 200
+  },
+  {
     "chno": "257",
-    "id": "Virgin.Radio.it",
-    "name": "VIRGIN RADIO",
+    "id": "GamberoRosso.it",
+    "name": "Gambero Rosso",
     "online": true,
     "status_code": 200
   },
@@ -448,6 +476,13 @@
     "status_code": 200
   },
   {
+    "chno": "507",
+    "id": "ClassCNBC.it",
+    "name": "Class CNBC",
+    "online": true,
+    "status_code": 200
+  },
+  {
     "chno": "713",
     "id": "RadioCapitalTv.it",
     "name": "Radio Capital TV",
@@ -462,9 +497,16 @@
     "status_code": 200
   },
   {
-    "chno": "772",
-    "id": "RadioMontecarlo.it",
+    "chno": "716",
+    "id": "RadioMonteCarloTV.it",
     "name": "Radio Montecarlo TV",
+    "online": true,
+    "status_code": 200
+  },
+  {
+    "chno": "717",
+    "id": "VirginRadioTV.it",
+    "name": "Virgin Radio TV",
     "online": true,
     "status_code": 200
   },
@@ -504,9 +546,30 @@
     "status_code": 200
   },
   {
+    "chno": "805",
+    "id": "Mediaset.Italia.it",
+    "name": "Mediaset Italia - America",
+    "online": true,
+    "status_code": 200
+  },
+  {
+    "chno": "806",
+    "id": "Mediaset.Italia.it",
+    "name": "Mediaset Italia - Australia e Asia",
+    "online": true,
+    "status_code": 200
+  },
+  {
+    "chno": "807",
+    "id": "Mediaset.Italia.it",
+    "name": "Mediaset Italia - Europa e Africa",
+    "online": true,
+    "status_code": 200
+  },
+  {
     "chno": "899",
-    "id": "RadioTvSerieA.it",
-    "name": "Radio TV Serie A con RDS",
+    "id": "RadioTVSerieA.it",
+    "name": "Radio TV Serie A",
     "online": true,
     "status_code": 200
   }
