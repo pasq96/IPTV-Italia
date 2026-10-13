@@ -486,8 +486,8 @@
     "chno": "713",
     "id": "RadioCapitalTv.it",
     "name": "Radio Capital TV",
-    "online": false,
-    "status_code": 404
+    "online": true,
+    "status_code": 200
   },
   {
     "chno": "715",
