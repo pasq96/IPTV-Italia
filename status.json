@@ -346,8 +346,8 @@
     "chno": "62",
     "id": "DonnaTV.it",
     "name": "Donna TV",
-    "online": true,
-    "status_code": 200
+    "online": false,
+    "status_code": 503
   },
   {
     "chno": "64",
