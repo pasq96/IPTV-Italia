@@ -1,62 +1,62 @@
 #EXTM3U
-#EXTINF:-1 tvg-chno="1" tvg-id="Rai1.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai1.png" group-title="Rai",Rai 1
+#EXTINF:-1 tvg-chno="1" tvg-id="Rai 1" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai1.png" group-title="Rai",Rai 1
 #EXTVLCOPT:http-user-agent=rainet/4.0.5
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803&output=7&forceUserAgent=rainet/4.0.5
-#EXTINF:-1 tvg-chno="2" tvg-id="Rai2.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai2.png" group-title="Rai",Rai 2
+#EXTINF:-1 tvg-chno="2" tvg-id="Rai 2" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai2.png" group-title="Rai",Rai 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://raidue3-live.akamaized.net/hls/live/2017983/raidue3/raidue3/playlist.m3u8
-#EXTINF:-1 tvg-chno="3" tvg-id="Rai3.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai3.png" group-title="Rai",Rai 3
+#EXTINF:-1 tvg-chno="3" tvg-id="Rai 3" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai3.png" group-title="Rai",Rai 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://raitre3-live.akamaized.net/hls/live/2018002/raitre3/raitre3/playlist.m3u8
-#EXTINF:-1 tvg-chno="4" tvg-id="Rete.4.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rete4.png" group-title="Mediaset",Rete 4
+#EXTINF:-1 tvg-chno="4" tvg-id="Rete 4" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rete4.png" group-title="Mediaset",Rete 4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-r4/r4-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="5" tvg-id="Canale.5.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/canale5.png" group-title="Mediaset",Canale 5
+#EXTINF:-1 tvg-chno="5" tvg-id="Canale 5" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/canale5.png" group-title="Mediaset",Canale 5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-c5/c5-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="6" tvg-id="Italia.1.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/italia1.png" group-title="Mediaset",Italia 1
+#EXTINF:-1 tvg-chno="6" tvg-id="Italia 1" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/italia1.png" group-title="Mediaset",Italia 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-i1/i1-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="7" tvg-id="LA7.HD.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la7.png" group-title="Altro",LA7
+#EXTINF:-1 tvg-chno="7" tvg-id="LA7" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la7.png" group-title="Altro",LA7
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d1chghleocc9sm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-evfku205gqrtf/Live.m3u8
-#EXTINF:-1 tvg-chno="8" tvg-id="TV8.HD.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/tv8.png" group-title="Sky",TV8
+#EXTINF:-1 tvg-chno="8" tvg-id="TV8" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/tv8.png" group-title="Sky",TV8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11223/tv8web/master.m3u8?hdnts=st=1764666351~exp=1829466206~acl=/*~hmac=b0e9165b6c55027903ad103c8219f363d8765eb300c0d9a339e9767fc3509556
-#EXTINF:-1 tvg-chno="9" tvg-id="Nove.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/nove.png" group-title="Discovery",Nove
+#EXTINF:-1 tvg-chno="9" tvg-id="NOVE" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/nove.png" group-title="Discovery",Nove
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/NOVE/CMAF/index.m3u8
-#EXTINF:-1 tvg-chno="20" tvg-id="20.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/20mediaset.png" group-title="Mediaset",20 Mediaset
+#EXTINF:-1 tvg-chno="20" tvg-id="20 Mediaset" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/20mediaset.png" group-title="Mediaset",20 Mediaset
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="21" tvg-id="Rai4.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai4.png" group-title="Rai",Rai 4
+#EXTINF:-1 tvg-chno="21" tvg-id="Rai 4" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai4.png" group-title="Rai",Rai 4
 #EXTVLCOPT:http-user-agent=raiplayappletv
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966&output=7&forceUserAgent=raiplayappletv
-#EXTINF:-1 tvg-chno="22" tvg-id="Iris.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/iris.png" group-title="Mediaset",Iris
+#EXTINF:-1 tvg-chno="22" tvg-id="Iris" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/iris.png" group-title="Mediaset",Iris
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ki/ki-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="23" tvg-id="Rai5.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai5.png" group-title="Rai",Rai 5
+#EXTINF:-1 tvg-chno="23" tvg-id="Rai 5" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/rai5.png" group-title="Rai",Rai 5
 #EXTVLCOPT:http-user-agent=raiplayappletv
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276&output=7&forceUserAgent=raiplayappletv
-#EXTINF:-1 tvg-chno="24" tvg-id="RaiMovie.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raimovie.png" group-title="Rai",Rai Movie
+#EXTINF:-1 tvg-chno="24" tvg-id="Rai Movie" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raimovie.png" group-title="Rai",Rai Movie
 #EXTVLCOPT:http-user-agent=raiplayappletv
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747002&output=7&forceUserAgent=raiplayappletv
-#EXTINF:-1 tvg-chno="25" tvg-id="RaiPremium.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raipremium.png" group-title="Rai",Rai Premium
+#EXTINF:-1 tvg-chno="25" tvg-id="Rai Premium" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raipremium.png" group-title="Rai",Rai Premium
 #EXTVLCOPT:http-user-agent=raiplayappletv
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992&output=7&forceUserAgent=raiplayappletv
-#EXTINF:-1 tvg-chno="26" tvg-id="cielo.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cielo.png" group-title="Sky",Cielo
+#EXTINF:-1 tvg-chno="26" tvg-id="Cielo" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/cielo.png" group-title="Sky",Cielo
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11219/cieloweb/master.m3u8?hdnts=st=1764666351~exp=1829466206~acl=/*~hmac=b0e9165b6c55027903ad103c8219f363d8765eb300c0d9a339e9767fc3509556
-#EXTINF:-1 tvg-chno="27" tvg-id="27.Twentyseven.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/twentyseven.png" group-title="Mediaset",Twenty Seven
+#EXTINF:-1 tvg-chno="27" tvg-id="Twenty Seven" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/twentyseven.png" group-title="Mediaset",Twenty Seven
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ts/ts-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="28" tvg-id="TV2000.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/tv2000.png" group-title="Altro",TV2000
+#EXTINF:-1 tvg-chno="28" tvg-id="TV2000" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/tv2000.png" group-title="Altro",TV2000
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://hls-live-tv2000.akamaized.net/hls/live/2028510/tv2000/master.m3u8
-#EXTINF:-1 tvg-chno="29" tvg-id="LA7d.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la7d.png" group-title="Altro",LA7d
+#EXTINF:-1 tvg-chno="29" tvg-id="La7d" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la7d.png" group-title="Altro",LA7d
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0)
 https://d15umi5iaezxgx.cloudfront.net/HBBTV/LA7D/DASH/Live.mpd
-#EXTINF:-1 tvg-chno="30" tvg-id="La.5.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la5.png" group-title="Mediaset",La 5
+#EXTINF:-1 tvg-chno="30" tvg-id="La 5" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/la5.png" group-title="Mediaset",La 5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msf.cdn.mediaset.net/live/ch-ka/ka-clr.isml/index.m3u8
 #EXTINF:-1 tvg-chno="31" tvg-id="Real.Time.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/realtime.png" group-title="Discovery",RealTime
