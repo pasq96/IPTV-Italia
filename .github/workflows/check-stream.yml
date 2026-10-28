@@ -10,24 +10,29 @@ on:
     - cron: '0 */12 * * *' 
   workflow_dispatch:
 
+# Evita che due esecuzioni dello stesso workflow si sovrappongano
+concurrency:
+  group: check-stream
+  cancel-in-progress: false
+
 jobs:
   check-and-refresh:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       NODE_OPTIONS: "--no-deprecation"
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurazione ambiente Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.11'
 
       - name: Cache dei pacchetti APT per ffmpeg
         id: cache-ffmpeg
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .apt-cache
           key: ${{ runner.os }}-apt-ffmpeg-v1
@@ -55,5 +60,20 @@ jobs:
             echo "Nessun aggiornamento necessario."
           else
             git commit -m "auto: update stream status and refreshed tokens [skip ci]"
-            git push origin main
+            # Il workflow Build Merged EPG può pushare in parallelo: riallinea
+            # e ritenta il push invece di fallire per "fetch first".
+            for attempt in 1 2 3; do
+              if git pull --rebase --autostash origin main; then
+                if git push origin main; then
+                  echo "Push riuscito (tentativo $attempt)."
+                  exit 0
+                fi
+              else
+                git rebase --abort 2>/dev/null || true
+              fi
+              echo "Push rifiutato, riprovo ($attempt/3)..."
+              sleep 5
+            done
+            echo "::error::Impossibile pushare dopo 3 tentativi."
+            exit 1
           fi
