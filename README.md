@@ -28,18 +28,18 @@ https://raw.githubusercontent.com/pasq96/IPTV-Italia/refs/heads/main/iptvitaplus
 La playlist include già la guida TV: l'header contiene
 
 ```
-#EXTM3U x-tvg-url="https://raw.githubusercontent.com/pasq96/IPTV-Italia/refs/heads/main/epg.xml.gz"
+#EXTM3U x-tvg-url="https://github.com/pasq96/IPTV-Italia/releases/download/epg/epg.xml.gz"
 ```
 
 quindi i player compatibili (TiviMate, OTT Navigator, IPTV Smarters, …) scaricano l'EPG **automaticamente**, senza configurazioni manuali. Se il tuo player non legge l'header, aggiungi come unica sorgente EPG:
 
 ```
-https://raw.githubusercontent.com/pasq96/IPTV-Italia/refs/heads/main/epg.xml.gz
+https://github.com/pasq96/IPTV-Italia/releases/download/epg/epg.xml.gz
 ```
 
 ### Come viene generato
 
-Il file `epg.xml.gz` è prodotto ogni giorno dal workflow [Build Merged EPG](./.github/workflows/build-epg.yml) tramite `scripts/build_epg.py`, che unisce:
+Il file `epg.xml.gz` è prodotto ogni giorno dal workflow [Build Merged EPG](./.github/workflows/build-epg.yml) tramite `scripts/build_epg.py` e pubblicato come **asset della release `epg`**: viene sovrascritto a ogni esecuzione, quindi l'aggiornamento non genera commit nel repository. Lo script unisce:
 
 | Sorgente | Contenuto |
 |---|---|
@@ -54,14 +54,15 @@ Il merge tiene solo i canali presenti nella playlist e riscrive gli id sui rispe
 
 ## 🚀 Caratteristiche Principali
 
-- **Refresh Dinamico dei Token**: Estrazione automatica dei token aggiornati per i canali protetti (TV8, Cielo, Sky TG24) tramite logiche dedicate per prevenire blocchi.
-- **Health Check Parallelo**: Esecuzione rapida tramite `ffprobe` e thread pool multipli per testare la stabilità di tutti i flussi in pochi secondi.
-- **Report di Stato in Tempo Reale**: Monitoraggio dettagliato dello stato dei canali consultabile nel file [status.json](./status.json), con flag espliciti per i token rigenerati (`token_refreshed`).
+- **EPG nativo**: la playlist punta a un unico file EPG aggiornato ogni giorno (epgitalia + open-epg) e pubblicato come asset di release.
+- **Nessun commit automatico**: né l'EPG né i controlli degli stream scrivono nella storia del repository.
+- **Token Sky a lunga scadenza**: i link di TV8, Cielo e Sky TG24 sono validi fino a dicembre 2027.
+- **Health check on demand**: il workflow manuale *Stream Health Check* testa i flussi con `ffprobe` e allega `status.json` al run, senza toccare il repository.
 
 ---
 
 ## ⚙️ Come Funziona l'Automazione
 
-1. Il workflow di GitHub Actions si avvia automaticamente **ogni 12 ore** (o a ogni modifica manuale della playlist).
-2. I flussi vengono validati in background filtrando quelli offline o non disponibili.
-3. I link con token scaduti vengono aggiornati al volo e il file `iptvitaplus.m3u` viene salvato in autonomia sul branch `main`.
+1. **Build Merged EPG** parte ogni giorno alle 04:30 UTC (06:30 italiane) e a ogni modifica di script o playlist.
+2. Genera `epg.xml.gz` e lo **sovrascrive come asset della release `epg`**: l'URL resta stabile, la cronologia del repo non cresce.
+3. Il controllo degli stream non è più schedulato: si avvia a mano dalla tab **Actions** e produce solo artifact.
