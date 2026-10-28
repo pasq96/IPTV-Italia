@@ -14,6 +14,7 @@ caricare una sola sorgente EPG.
 from __future__ import annotations
 
 import gzip
+import io
 import re
 import sys
 import unicodedata
@@ -283,7 +284,9 @@ def build() -> int:
         '<tv generator-info-name="IPTV-Italia merged EPG" '
         'generator-info-url="https://github.com/pasq96/IPTV-Italia">\n'
     )
-    with gzip.open(OUTPUT, "wt", encoding="utf-8", compresslevel=9) as out:
+    with OUTPUT.open("wb") as raw, gzip.GzipFile(
+        fileobj=raw, mode="wb", compresslevel=9, mtime=0
+    ) as gz, io.TextIOWrapper(gz, encoding="utf-8", newline="\n") as out:
         out.write(header)
         out.writelines(channels)
         out.writelines(programmes)
