@@ -221,19 +221,19 @@ https://live02-seg.msr.cdn.mediaset.net/live/ch-bb/bb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-chno="717" tvg-id="Virgin Radio" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/virginradiotv.png" group-title="Radio",Virgin Radio TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://live02-seg.msr.cdn.mediaset.net/live/ch-ew/ew-clr.isml/index.m3u8
-#EXTINF:-1 tvg-chno="800" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiitalia.png" group-title="Rai",Rai Italia Asia e Australia
+#EXTINF:-1 tvg-chno="800" tvg-id="RaiItaliaAsiaAustralia.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiitalia.png" group-title="Rai",Rai Italia Asia e Australia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/RAIHD/Live.m3u8
-#EXTINF:-1 tvg-chno="801" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiitalia.png" group-title="Rai",Rai Italia Europa e Africa
+#EXTINF:-1 tvg-chno="801" tvg-id="RaiItaliaEuropaAfrica.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiitalia.png" group-title="Rai",Rai Italia Europa e Africa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/RAIEU/Live.m3u8
 #EXTINF:-1 tvg-chno="802" tvg-id="RaiItaliaAmerica.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiitalia.png" group-title="Rai",Rai Italia Nord America
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/RAIUSA/Live.m3u8
-#EXTINF:-1 tvg-chno="803" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiitalia.png" group-title="Rai",Rai Italia Sud America
+#EXTINF:-1 tvg-chno="803" tvg-id="RaiItaliaSudAmerica.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiitalia.png" group-title="Rai",Rai Italia Sud America
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/RAISA/Live.m3u8
-#EXTINF:-1 tvg-chno="804" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiworldpremium.png" group-title="Rai",Rai World Premium
+#EXTINF:-1 tvg-chno="804" tvg-id="RaiWorldPremium.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiworldpremium.png" group-title="Rai",Rai World Premium
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/RAIP/Live.m3u8
 #EXTINF:-1 tvg-chno="805" tvg-id="Mediaset.Italia.-.America.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetitalia.png" group-title="Mediaset",Mediaset Italia - America

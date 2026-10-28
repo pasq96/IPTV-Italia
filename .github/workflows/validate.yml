@@ -1,0 +1,36 @@
+name: "Validate Playlist and EPG"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'iptvitaplus.m3u'
+      - 'ipradioita.m3u'
+      - 'iptvitapluto.m3u'
+      - 'scripts/validate.py'
+      - '.github/workflows/validate.yml'
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Configurazione ambiente Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Valida playlist ed EPG
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python scripts/validate.py

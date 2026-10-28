@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import gzip
 import io
+import os
 import re
 import sys
 import unicodedata
@@ -36,6 +37,9 @@ USER_AGENT = "IPTV-Italia-EPG-Builder/1.0 (+https://github.com/pasq96/IPTV-Itali
 PLAYLIST = Path("iptvitaplus.m3u")
 OUTPUT = Path("epg.xml.gz")
 CACHE_DIR = Path(".epg-cache")
+
+# EPG_STRIP_DESC=1 rimuove le <desc> dei programmi: file molto piu' leggero.
+STRIP_DESC = os.environ.get("EPG_STRIP_DESC", "").strip().lower() in {"1", "true", "yes", "on"}
 
 # tvg-id playlist -> id canale nella sorgente di fallback.
 # Servono solo per i canali che epgitalia non copre (0 programmi) e per
@@ -71,6 +75,7 @@ CHANNEL_RE = re.compile(r'<channel\s+id="([^"]+)"')
 PROGRAMME_RE = re.compile(r'<programme\b[^>]*\bchannel="([^"]+)"')
 DISPLAY_RE = re.compile(r"<display-name[^>]*>([^<]*)</display-name>")
 TVG_ID_RE = re.compile(r'tvg-id="([^"]*)"')
+DESC_RE = re.compile(r"<desc\b[^>]*>.*?</desc>\s*", re.S)
 
 
 def norm(value: str) -> str:
@@ -149,6 +154,9 @@ def collect(path: Path, wanted: dict[str, str]) -> tuple[list[str], list[str]]:
     channels: list[str] = []
     programmes: list[str] = []
 
+    def clean(text: str) -> str:
+        return DESC_RE.sub("", text) if STRIP_DESC else text
+
     channel_buffer: list[str] | None = None
     channel_source: str = ""
     programme_buffer: list[str] | None = None
@@ -173,7 +181,7 @@ def collect(path: Path, wanted: dict[str, str]) -> tuple[list[str], list[str]]:
                 first = programme_buffer[0].replace(
                     f'channel="{skipping_programme}"', f'channel="{wanted[skipping_programme]}"', 1
                 )
-                programmes.append(first + "".join(programme_buffer[1:]))
+                programmes.append(clean(first + "".join(programme_buffer[1:])))
                 programme_buffer = None
                 skipping_programme = False
             continue
@@ -197,7 +205,7 @@ def collect(path: Path, wanted: dict[str, str]) -> tuple[list[str], list[str]]:
             if source and source in wanted:
                 if "</programme>" in line:
                     programmes.append(
-                        line.replace(f'channel="{source}"', f'channel="{wanted[source]}"', 1)
+                        clean(line.replace(f'channel="{source}"', f'channel="{wanted[source]}"', 1))
                     )
                 else:
                     programme_buffer = [line]
@@ -298,6 +306,7 @@ def build() -> int:
     log("")
     log(f"[output] {OUTPUT} ({OUTPUT.stat().st_size / 1024:.0f} KB)")
     log(f"[output] {len(channels)} canali, {len(programmes)} programmi")
+    log(f"[output] descrizioni: {'rimosse' if STRIP_DESC else 'incluse'}")
     log(f"[copertura] {len(used)}/{len(ids)} tvg-id con EPG")
     if missing:
         log(f"[senza EPG] {len(missing)}: " + ", ".join(missing))

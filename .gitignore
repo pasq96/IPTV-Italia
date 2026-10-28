@@ -4,3 +4,6 @@ __pycache__/
 
 # EPG generato: pubblicato come asset di release, non versionato
 epg.xml.gz
+
+# Report locale del check stream (pubblicato come artifact / issue)
+status.json

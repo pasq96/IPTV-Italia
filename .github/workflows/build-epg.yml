@@ -5,6 +5,11 @@ on:
     # ogni giorno alle 04:30 UTC (06:30 italiane)
     - cron: '30 4 * * *'
   workflow_dispatch:
+    inputs:
+      strip_desc:
+        description: "Genera l'EPG senza descrizioni (file piu' leggero)"
+        type: boolean
+        default: false
   push:
     branches:
       - main
@@ -35,6 +40,7 @@ jobs:
       - name: Genera EPG unito (epgitalia + open-epg)
         env:
           PYTHONUNBUFFERED: "1"
+          EPG_STRIP_DESC: ${{ inputs.strip_desc && '1' || '0' }}
         run: python scripts/build_epg.py
 
       - name: Pubblica l'EPG come asset di release
@@ -54,3 +60,6 @@ jobs:
           curl -fsSL --retry 3 --max-time 60 "$URL" -o /tmp/check.gz
           gzip -t /tmp/check.gz
           echo "Asset raggiungibile e gzip valido: $URL"
+
+      - name: Riepilogo copertura nel run
+        run: python scripts/validate.py

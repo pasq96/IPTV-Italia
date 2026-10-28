@@ -1,0 +1,112 @@
+name: "Monthly Stream Report"
+
+# Un solo report al mese: aggiorna (o apre) una singola issue con i canali
+# offline. Nessun commit e nessuna notifica ripetuta.
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: stream-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-24.04
+    env:
+      NODE_OPTIONS: "--no-deprecation"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Configurazione ambiente Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Cache dei pacchetti APT per ffmpeg
+        id: cache-ffmpeg
+        uses: actions/cache@v6
+        with:
+          path: .apt-cache
+          key: ${{ runner.os }}-apt-ffmpeg-v1
+
+      - name: Installa ffmpeg e ffprobe
+        run: |
+          mkdir -p .apt-cache
+          sudo apt-get update
+          sudo apt-get install -y -o Dir::Cache::Archives="$PWD/.apt-cache" ffmpeg
+          sudo rm -rf .apt-cache/lock .apt-cache/partial
+          sudo chown -R $USER:$USER .apt-cache
+
+      - name: Verifica dei flussi
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python .github/scripts/check_and_update.py
+
+      - name: Prepara il corpo della issue
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import date
+
+          with open("status.json", encoding="utf-8") as handle:
+              report = json.load(handle)
+
+          offline = [c for c in report if not c.get("online")]
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as env:
+              env.write(f"OFFLINE_COUNT={len(offline)}\n")
+
+          lines = [
+              f"## Canali offline — {date.today().isoformat()}",
+              "",
+              f"Controllati **{len(report)}** canali: **{len(offline)}** non raggiungibili.",
+              "",
+          ]
+          if offline:
+              lines += ["| # | Canale | Codice |", "|---|---|---|"]
+              lines += [f"| {c['chno']} | {c['name']} | {c['status_code']} |" for c in offline]
+          else:
+              lines.append("Tutti i canali risultano online. ✅")
+          lines += ["", "_Report generato automaticamente dal workflow Monthly Stream Report._"]
+
+          with open(os.environ["RUNNER_TEMP"] + "/body.md", "w", encoding="utf-8") as body:
+              body.write("\n".join(lines) + "\n")
+          PY
+
+      - name: Aggiorna la issue del report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Canali offline (report automatico)"
+          BODY="$RUNNER_TEMP/body.md"
+          gh label create stream-health --color FBCA04 \
+            --description "Report automatico dei canali offline" 2>/dev/null || true
+
+          NUMBER=$(gh issue list --state open --limit 100 --json number,title \
+            --jq ".[] | select(.title == \"$TITLE\") | .number" | head -n1)
+
+          if [ -z "$NUMBER" ]; then
+            if [ "$OFFLINE_COUNT" -gt 0 ]; then
+              gh issue create --title "$TITLE" --body-file "$BODY" --label stream-health
+            else
+              echo "Nessun canale offline: non serve aprire una issue."
+            fi
+          elif [ "$OFFLINE_COUNT" -eq 0 ]; then
+            gh issue close "$NUMBER" --comment "Tutti i canali risultano online. Chiusura automatica."
+          else
+            gh issue edit "$NUMBER" --body-file "$BODY"
+          fi
+
+      - name: Salva il report come artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: stream-report
+          path: status.json
+          if-no-files-found: warn
