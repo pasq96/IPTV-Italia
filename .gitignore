@@ -1,0 +1,6 @@
+# Cache locale dello script di build EPG
+.epg-cache/
+__pycache__/
+
+# EPG generato: pubblicato come asset di release, non versionato
+epg.xml.gz

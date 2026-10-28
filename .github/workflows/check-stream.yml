@@ -1,33 +1,33 @@
-name: "Check IPTV Streams and Refresh Tokens"
+name: "Stream Health Check (manuale)"
 
+# Nessuna schedulazione: si lancia solo a mano da Actions.
+# Non fa commit: il report e l'eventuale playlist aggiornata finiscono
+# come artifact del run.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'iptvitaplus.m3u'
-  schedule:
-    - cron: '0 */12 * * *' 
   workflow_dispatch:
 
+concurrency:
+  group: check-stream
+  cancel-in-progress: false
+
 jobs:
-  check-and-refresh:
-    runs-on: ubuntu-latest
+  check:
+    runs-on: ubuntu-24.04
     env:
       NODE_OPTIONS: "--no-deprecation"
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurazione ambiente Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.11'
 
       - name: Cache dei pacchetti APT per ffmpeg
         id: cache-ffmpeg
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .apt-cache
           key: ${{ runner.os }}-apt-ffmpeg-v1
@@ -37,23 +37,19 @@ jobs:
           mkdir -p .apt-cache
           sudo apt-get update
           sudo apt-get install -y -o Dir::Cache::Archives="$PWD/.apt-cache" ffmpeg
-          # Rimuove i file protetti da root (lock e partial) e cambia la proprietà dei .deb all'utente runner
           sudo rm -rf .apt-cache/lock .apt-cache/partial
           sudo chown -R $USER:$USER .apt-cache
 
-      - name: Esecuzione script di verifica e update
+      - name: Esecuzione script di verifica
         env:
           PYTHONUNBUFFERED: "1"
         run: python .github/scripts/check_and_update.py
 
-      - name: Commit e Push delle modifiche
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add status.json iptvitaplus.m3u
-          if git diff --staged --quiet; then
-            echo "Nessun aggiornamento necessario."
-          else
-            git commit -m "auto: update stream status and refreshed tokens [skip ci]"
-            git push origin main
-          fi
+      - name: Salva report e playlist come artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: stream-check
+          path: |
+            status.json
+            iptvitaplus.m3u
+          if-no-files-found: warn
