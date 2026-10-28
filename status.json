@@ -1,140 +1,140 @@
 [
   {
     "chno": "1",
-    "id": "Rai1.it",
+    "id": "Rai 1",
     "name": "Rai 1",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "2",
-    "id": "Rai2.it",
+    "id": "Rai 2",
     "name": "Rai 2",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "3",
-    "id": "Rai3.it",
+    "id": "Rai 3",
     "name": "Rai 3",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "4",
-    "id": "Rete.4.it",
+    "id": "Rete 4",
     "name": "Rete 4",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "5",
-    "id": "Canale.5.it",
+    "id": "Canale 5",
     "name": "Canale 5",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "6",
-    "id": "Italia.1.it",
+    "id": "Italia 1",
     "name": "Italia 1",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "7",
-    "id": "LA7.HD.it",
+    "id": "LA7",
     "name": "LA7",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "8",
-    "id": "TV8.HD.it",
+    "id": "TV8",
     "name": "TV8",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "9",
-    "id": "Nove.it",
+    "id": "NOVE",
     "name": "Nove",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "20",
-    "id": "20.it",
+    "id": "20 Mediaset",
     "name": "20 Mediaset",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "21",
-    "id": "Rai4.it",
+    "id": "Rai 4",
     "name": "Rai 4",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "22",
-    "id": "Iris.it",
+    "id": "Iris",
     "name": "Iris",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "23",
-    "id": "Rai5.it",
+    "id": "Rai 5",
     "name": "Rai 5",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "24",
-    "id": "RaiMovie.it",
+    "id": "Rai Movie",
     "name": "Rai Movie",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "25",
-    "id": "RaiPremium.it",
+    "id": "Rai Premium",
     "name": "Rai Premium",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "26",
-    "id": "cielo.it",
+    "id": "Cielo",
     "name": "Cielo",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "27",
-    "id": "27.Twentyseven.it",
+    "id": "Twenty Seven",
     "name": "Twenty Seven",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "28",
-    "id": "TV2000.it",
+    "id": "TV2000",
     "name": "TV2000",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "29",
-    "id": "LA7d.it",
+    "id": "La7d",
     "name": "LA7d",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "30",
-    "id": "La.5.it",
+    "id": "La 5",
     "name": "La 5",
     "online": true,
     "status_code": 200
@@ -346,8 +346,8 @@
     "chno": "62",
     "id": "DonnaTV.it",
     "name": "Donna TV",
-    "online": false,
-    "status_code": 503
+    "online": true,
+    "status_code": 200
   },
   {
     "chno": "64",
