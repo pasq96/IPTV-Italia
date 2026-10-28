@@ -25,6 +25,7 @@ concurrency:
 jobs:
   build-epg:
     runs-on: ubuntu-24.04
+    timeout-minutes: 20
     permissions:
       contents: write
 
@@ -37,11 +38,27 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Verifica estrattore 7z
+        run: |
+          # Serve solo se epgitalia risponde con /guidexz (archivio 7z).
+          if ! command -v 7z >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq p7zip-full
+          fi
+          echo "7z disponibile: $(command -v 7z)"
+
       - name: Genera EPG unito (epgitalia + open-epg)
+        timeout-minutes: 15
         env:
           PYTHONUNBUFFERED: "1"
           EPG_STRIP_DESC: ${{ inputs.strip_desc && '1' || '0' }}
         run: python scripts/build_epg.py
+
+      - name: Controlla EPG generato
+        run: |
+          test -s epg.xml.gz
+          gzip -t epg.xml.gz
+          echo "EPG generato: $(du -h epg.xml.gz | cut -f1)"
 
       - name: Pubblica l'EPG come asset di release
         env:
@@ -52,12 +69,23 @@ jobs:
             gh release create epg --target main \
               --title "EPG aggiornato" \
               --notes "Asset epg.xml.gz rigenerato automaticamente ogni giorno (epgitalia + open-epg)."
-          gh release upload epg epg.xml.gz --clobber
+
+          # Retry: l'upload puo' fallire per errori transitori dell'API GitHub.
+          attempt=1
+          until gh release upload epg epg.xml.gz --clobber; do
+            if [ "$attempt" -ge 3 ]; then
+              echo "Upload fallito dopo $attempt tentativi" >&2
+              exit 1
+            fi
+            attempt=$((attempt + 1))
+            sleep $((attempt * 3))
+          done
 
       - name: Verifica URL pubblico
         run: |
           URL="https://github.com/pasq96/IPTV-Italia/releases/download/epg/epg.xml.gz"
-          curl -fsSL --retry 3 --max-time 60 "$URL" -o /tmp/check.gz
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 60 \
+            "$URL" -o /tmp/check.gz
           gzip -t /tmp/check.gz
           echo "Asset raggiungibile e gzip valido: $URL"
 

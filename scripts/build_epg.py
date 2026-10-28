@@ -17,12 +17,25 @@ import gzip
 import io
 import os
 import re
+import shutil
+import subprocess
 import sys
+import time
 import unicodedata
+import urllib.error
 import urllib.request
 from pathlib import Path
 
-PRIMARY_URL = "https://www.epgitalia.tv/gzip"
+# Sorgenti primarie, in ordine di priorita'. Si usa la prima raggiungibile:
+# epgitalia ha piu' volte cambiato/spento gli endpoint, quindi il fallback
+# /guidexz evita che un 404 blocchi l'intera build.
+PRIMARY_SOURCES = [
+    ("epgitalia /gzip", "https://www.epgitalia.tv/gzip", "epgitalia.xml.gz"),
+    ("epgitalia /guidexz", "https://www.epgitalia.tv/guidexz", "epgitalia.xml.7z"),
+]
+
+DOWNLOAD_ATTEMPTS = 3
+DOWNLOAD_TIMEOUT = 180
 
 # Sorgenti di fallback, in ordine di priorita': la prima che ha programmi
 # per un canale scoperto vince.
@@ -93,17 +106,102 @@ def download(url: str, filename: str) -> Path:
     CACHE_DIR.mkdir(exist_ok=True)
     target = CACHE_DIR / filename
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    log(f"[download] {url}")
-    with urllib.request.urlopen(request, timeout=180) as response, target.open("wb") as out:
-        out.write(response.read())
-    log(f"[download] {target} ({target.stat().st_size / 1024 / 1024:.1f} MB)")
-    return target
+    last_error: Exception | None = None
+
+    for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
+        suffix = f" (tentativo {attempt}/{DOWNLOAD_ATTEMPTS})" if attempt > 1 else ""
+        log(f"[download] {url}{suffix}")
+        try:
+            with urllib.request.urlopen(request, timeout=DOWNLOAD_TIMEOUT) as response, target.open("wb") as out:
+                shutil.copyfileobj(response, out)
+            log(f"[download] {target} ({target.stat().st_size / 1024 / 1024:.1f} MB)")
+            return target
+        except Exception as exc:  # noqa: BLE001 - si ritenta solo su errori transitori
+            last_error = exc
+            target.unlink(missing_ok=True)
+            permanent = (
+                isinstance(exc, urllib.error.HTTPError)
+                and 400 <= exc.code < 500
+                and exc.code != 429
+            )
+            if permanent:
+                log(f"[warn] download fallito: {exc} (errore definitivo, nessun retry)")
+                break
+            if attempt < DOWNLOAD_ATTEMPTS:
+                delay = 2 ** (attempt - 1)
+                log(f"[warn] download fallito: {exc}; nuovo tentativo tra {delay}s")
+                time.sleep(delay)
+
+    assert last_error is not None
+    raise last_error
+
+
+def download_primary() -> tuple[Path, str]:
+    """Scarica la prima sorgente primaria disponibile (gzip -> guidexz)."""
+    errors: list[str] = []
+    for label, url, filename in PRIMARY_SOURCES:
+        try:
+            return download(url, filename), label
+        except Exception as exc:  # noqa: BLE001 - si prova la sorgente successiva
+            log(f"[warn] sorgente primaria {label} non disponibile: {exc}")
+            errors.append(f"{label}: {exc}")
+    raise RuntimeError("; ".join(errors))
+
+
+def extract_7z(path: Path) -> Path:
+    """Estrae un archivio 7z (usato da epgitalia /guidexz) e ritorna l'XML."""
+    destination = CACHE_DIR / f"{path.name}.d"
+    destination.mkdir(parents=True, exist_ok=True)
+    xml_path = destination / "guide.xml"
+    marker = destination / ".extracted"
+
+    if xml_path.exists() and marker.exists() and marker.stat().st_mtime >= path.stat().st_mtime:
+        return xml_path
+
+    log(f"[estrai] {path} -> {destination}")
+    try:
+        import py7zr  # type: ignore[import-not-found]
+
+        with py7zr.SevenZipFile(path, mode="r") as archive:
+            archive.extract(path=destination)
+    except ImportError:
+        sevenzip = shutil.which("7z") or shutil.which("7za") or shutil.which("7zr")
+        if not sevenzip:
+            raise RuntimeError(
+                "archivio 7z da estrarre ma nessun estrattore disponibile "
+                "(installare p7zip-full oppure 'pip install py7zr')"
+            )
+        result = subprocess.run(
+            [sevenzip, "x", "-y", f"-o{destination}", str(path)],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            detail = (result.stderr or result.stdout or "").strip()
+            raise RuntimeError(f"estrazione 7z fallita: {detail}")
+
+    if not xml_path.exists():
+        candidates = sorted(destination.rglob("*.xml"))
+        if not candidates:
+            raise RuntimeError(f"nessun file XML trovato in {path}")
+        xml_path = candidates[0]
+
+    marker.touch()
+    return xml_path
 
 
 def open_xml(path: Path):
     with path.open("rb") as handle:
-        if handle.read(2) == b"\x1f\x8b":
-            return gzip.open(path, "rt", encoding="utf-8-sig", errors="replace")
+        magic = handle.read(6)
+
+    if magic[:2] == b"\x1f\x8b":
+        return gzip.open(path, "rt", encoding="utf-8-sig", errors="replace")
+    if magic == b"7z\xbc\xaf\x27\x1c":
+        return extract_7z(path).open("rt", encoding="utf-8-sig", errors="replace")
+    if magic == b"\xfd7zXZ\x00":
+        import lzma
+
+        return lzma.open(path, "rt", encoding="utf-8-sig", errors="replace")
     return path.open("rt", encoding="utf-8-sig", errors="replace")
 
 
@@ -242,22 +340,34 @@ def build() -> int:
         return 1
     log(f"[playlist] {len(ids)} tvg-id")
 
-    primary_path = download(PRIMARY_URL, "epgitalia.xml.gz")
+    try:
+        primary_path, primary_label = download_primary()
+    except Exception as exc:  # noqa: BLE001 - nessuna sorgente primaria raggiungibile
+        log(f"[errore] nessuna sorgente primaria disponibile: {exc}")
+        return 1
+
     primary_counts, primary_names = index_source(primary_path)
-    log(f"[epgitalia] {sum(primary_counts.values())} programmi, {len(primary_counts)} canali")
+    log(f"[{primary_label}] {sum(primary_counts.values())} programmi, {len(primary_counts)} canali")
+
+    # I fallback servono solo per i canali che la sorgente primaria non copre:
+    # se non ne mancano, evitiamo download e parsing inutili.
+    uncovered = [tvg_id for tvg_id in ids if primary_counts.get(tvg_id, 0) <= 0]
 
     fallbacks: list[dict] = []
-    for label, url, filename in FALLBACK_SOURCES:
-        try:
-            path = download(url, filename)
-        except Exception as exc:  # noqa: BLE001 - le sorgenti di fallback sono opzionali
-            log(f"[warn] sorgente {label} non disponibile: {exc}")
-            continue
-        counts, names = index_source(path)
-        log(f"[{label}] {sum(counts.values())} programmi, {len(counts)} canali")
-        fallbacks.append(
-            {"label": label, "path": path, "counts": counts, "names": names, "wanted": {}}
-        )
+    if uncovered:
+        for label, url, filename in FALLBACK_SOURCES:
+            try:
+                path = download(url, filename)
+            except Exception as exc:  # noqa: BLE001 - le sorgenti di fallback sono opzionali
+                log(f"[warn] sorgente {label} non disponibile: {exc}")
+                continue
+            counts, names = index_source(path)
+            log(f"[{label}] {sum(counts.values())} programmi, {len(counts)} canali")
+            fallbacks.append(
+                {"label": label, "path": path, "counts": counts, "names": names, "wanted": {}}
+            )
+    else:
+        log("[fallback] non necessari: la sorgente primaria copre tutti i tvg-id")
 
     primary_wanted: dict[str, str] = {}
     source_of: dict[str, str] = {}
@@ -265,7 +375,7 @@ def build() -> int:
     for tvg_id in ids:
         if primary_counts.get(tvg_id, 0) > 0:
             primary_wanted[tvg_id] = tvg_id
-            source_of[tvg_id] = "epgitalia"
+            source_of[tvg_id] = primary_label
             continue
         for source in fallbacks:
             fallback_id = pick_fallback_id(tvg_id, source["counts"], source["names"])

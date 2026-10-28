@@ -44,10 +44,12 @@ Il file `epg.xml.gz` è prodotto ogni giorno dal workflow [Build Merged EPG](./.
 
 | Sorgente | Contenuto |
 |---|---|
-| [epgitalia.tv](https://www.epgitalia.tv) (`/gzip`) | guida completa dei canali nazionali (Rai, Mediaset, Sky, Warner…) |
+| [epgitalia.tv](https://www.epgitalia.tv) (`/gzip`, fallback `/guidexz`) | guida completa dei canali nazionali (Rai, Mediaset, Sky, Warner…) |
 | [open-epg.com](https://www.open-epg.com) (`italy9.xml.gz`) | palinsesti Warner/Discovery e radio TV assenti in epgitalia |
 | [open-epg.com](https://www.open-epg.com) (`italy3.xml.gz`) | fallback per QVC, Donna TV, Radio 105 TV |
 | [open-epg.com](https://www.open-epg.com) (`italy2.xml.gz`) | fallback per Rai 4K, RDS Social TV |
+
+Se `/gzip` non è raggiungibile lo script passa automaticamente a `/guidexz` (archivio 7z) e solo dopo alle sorgenti di fallback. I download hanno retry con backoff sugli errori transitori e i feed open-epg vengono scaricati soltanto se la sorgente primaria non copre qualche `tvg-id`, così la build resta veloce.
 
 Il merge tiene solo i canali presenti nella playlist e riscrive gli id sui rispettivi `tvg-id`, così una sola sorgente EPG copre tutti i canali che hanno palinsesto disponibile. I tre feed di **Mediaset Italia** (America, Australia e Asia, Europa e Africa) hanno `tvg-id` distinti e quindi una guida separata.
 
