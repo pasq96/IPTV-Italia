@@ -1,0 +1,3 @@
+# Cache locale dello script di build EPG
+.epg-cache/
+__pycache__/

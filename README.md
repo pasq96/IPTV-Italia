@@ -25,7 +25,28 @@ https://raw.githubusercontent.com/pasq96/IPTV-Italia/refs/heads/main/iptvitaplus
 
 ## 📅 Guida TV (EPG)
 
-Per un'esperienza ottimale con i palinsesti, consiglio l'utilizzo degli EPG messi a disposizione da [epgitalia.tv](https://epgitalia.tv).
+La playlist include già la guida TV: l'header contiene
+
+```
+#EXTM3U x-tvg-url="https://raw.githubusercontent.com/pasq96/IPTV-Italia/refs/heads/main/epg.xml.gz"
+```
+
+quindi i player compatibili (TiviMate, OTT Navigator, IPTV Smarters, …) scaricano l'EPG **automaticamente**, senza configurazioni manuali. Se il tuo player non legge l'header, aggiungi come unica sorgente EPG:
+
+```
+https://raw.githubusercontent.com/pasq96/IPTV-Italia/refs/heads/main/epg.xml.gz
+```
+
+### Come viene generato
+
+Il file `epg.xml.gz` è prodotto ogni giorno dal workflow [Build Merged EPG](./.github/workflows/build-epg.yml) tramite `scripts/build_epg.py`, che unisce:
+
+| Sorgente | Contenuto |
+|---|---|
+| [epgitalia.tv](https://www.epgitalia.tv) (`/gzip`) | guida completa dei canali nazionali (Rai, Mediaset, Sky, Warner…) |
+| [open-epg.com](https://www.open-epg.com) (`italy9.xml.gz`) | palinsesti Warner/Discovery e radio TV assenti in epgitalia |
+
+Il merge tiene solo i canali presenti nella playlist e riscrive gli id sui rispettivi `tvg-id`, così una sola sorgente EPG copre tutti i canali che hanno palinsesto disponibile. Attualmente **59 canali su 76** ricevono la guida; restano senza EPG (nessuna delle due sorgenti li pubblica): `QVC`, `Donna TV`, `Radio 105 TV`, `BOM Channel`, `Radio Ibiza TV`, `Camera dei Deputati`, `Radio Kiss Kiss TV`, `Rai 4K`, `RTL 102.5 Napulè`, `Radio24`, `RDS Social TV`, `Radio Zeta`, `Radio Capital TV`, `M2O TV`, `Rai Italia`, `Mediaset Italia`, `Radio TV Serie A`.
 
 ---
 

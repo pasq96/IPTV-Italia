@@ -1,0 +1,51 @@
+name: "Build Merged EPG"
+
+on:
+  schedule:
+    # ogni giorno alle 04:30 UTC (06:30 italiane)
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/build_epg.py'
+      - '.github/workflows/build-epg.yml'
+      - 'iptvitaplus.m3u'
+
+concurrency:
+  group: build-epg
+  cancel-in-progress: true
+
+jobs:
+  build-epg:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configurazione ambiente Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Genera EPG unito (epgitalia + open-epg)
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python scripts/build_epg.py
+
+      - name: Commit e Push dell'EPG aggiornato
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add epg.xml.gz
+          if git diff --staged --quiet; then
+            echo "Nessun aggiornamento EPG necessario."
+          else
+            git commit -m "auto: rebuild merged EPG [skip ci]"
+            git pull --rebase --autostash origin main
+            git push origin main
+          fi

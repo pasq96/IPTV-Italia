@@ -141,196 +141,196 @@
   },
   {
     "chno": "31",
-    "id": "Real.Time.it",
+    "id": "Real Time",
     "name": "RealTime",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "32",
-    "id": "QVC.it",
+    "id": "QVC",
     "name": "QVC",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "33",
-    "id": "Food.Network.it",
+    "id": "Food Network",
     "name": "Food Network",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "34",
-    "id": "Cine34.it",
+    "id": "Cine34",
     "name": "Cine34",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "35",
-    "id": "Focus.it",
+    "id": "Focus",
     "name": "FOCUS",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "36",
-    "id": "RTL.102.5.HD.it",
+    "id": "RTL 102.5 TV",
     "name": "RTL 102.5",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "37",
-    "id": "Discovery.Channel.it",
+    "id": "Discovery Channel",
     "name": "Discovery Channel",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "38",
-    "id": "Giallo.TV.it",
+    "id": "Giallo",
     "name": "Giallo",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "39",
-    "id": "Top.Crime.it",
+    "id": "Top Crime",
     "name": "Top Crime",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "40",
-    "id": "Boing.it",
+    "id": "Boing",
     "name": "Boing",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "41",
-    "id": "K2.it",
+    "id": "K2",
     "name": "K2",
     "online": false,
     "status_code": 404
   },
   {
     "chno": "42",
-    "id": "RaiGulp.it",
+    "id": "Rai Gulp",
     "name": "Rai Gulp",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "43",
-    "id": "RaiYoyo.it",
+    "id": "Rai Yoyo",
     "name": "Rai Yoyo",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "44",
-    "id": "Frisbee.it",
+    "id": "Frisbee",
     "name": "Frisbee",
     "online": false,
     "status_code": 404
   },
   {
     "chno": "46",
-    "id": "Cartoonito.it",
+    "id": "Cartoonito",
     "name": "Cartoonito",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "47",
-    "id": "Super!.it",
+    "id": "Super!",
     "name": "Super!",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "48",
-    "id": "RaiNews24.it",
+    "id": "Rai News 24",
     "name": "Rai News 24",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "49",
-    "id": "Italia.2.it",
+    "id": "Italia 2",
     "name": "Italia 2",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "50",
-    "id": "Sky.TG24.it",
+    "id": "Sky TG24",
     "name": "Sky TG24",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "51",
-    "id": "TGCom.it",
+    "id": "TgCom24",
     "name": "TGCOM 24",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "52",
-    "id": "DMAX.it",
+    "id": "DMAX",
     "name": "DMAX",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "54",
-    "id": "RaiStoria.it",
+    "id": "Rai Storia",
     "name": "Rai Storia",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "55",
-    "id": "Mediaset.Extra.it",
+    "id": "Mediaset Extra",
     "name": "Mediaset Extra",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "56",
-    "id": "HGTV.it",
+    "id": "HGTV HD",
     "name": "HGTV - Home&Garden",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "57",
-    "id": "RaiScuola.it",
+    "id": "Rai Scuola",
     "name": "Rai Scuola",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "58",
-    "id": "RaiSport.it",
+    "id": "Rai Sport",
     "name": "Rai Sport + HD",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "59",
-    "id": "Motor.Trend.it",
+    "id": "Motor Trend",
     "name": "Discovery Turbo",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "60",
-    "id": "Sportitalia.it",
+    "id": "Sportitalia",
     "name": "Sportitalia",
     "online": true,
     "status_code": 200
@@ -351,7 +351,7 @@
   },
   {
     "chno": "64",
-    "id": "SuperTennis.HD.it",
+    "id": "SuperTennis HD",
     "name": "Supertennis",
     "online": true,
     "status_code": 200
@@ -379,14 +379,14 @@
   },
   {
     "chno": "69",
-    "id": "Deejay.TV.it",
+    "id": "Deejay TV",
     "name": "Deejay TV",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "70",
-    "id": "Radio.Italia.TV.HD.it",
+    "id": "RADIO ITALIA TV HD",
     "name": "RadioItaliaTV",
     "online": true,
     "status_code": 200
@@ -400,7 +400,7 @@
   },
   {
     "chno": "89",
-    "id": "SenatoTV.it",
+    "id": "Senato Italiano",
     "name": "Senato TV",
     "online": true,
     "status_code": 200
@@ -449,14 +449,14 @@
   },
   {
     "chno": "257",
-    "id": "GamberoRosso.it",
+    "id": "Gambero Rosso",
     "name": "Gambero Rosso",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "258",
-    "id": "RADIOFRECCIA.HD.it",
+    "id": "RADIOFRECCIA HD",
     "name": "RADIOFRECCIA",
     "online": true,
     "status_code": 200
@@ -477,7 +477,7 @@
   },
   {
     "chno": "507",
-    "id": "ClassCNBC.it",
+    "id": "Class CNBC",
     "name": "Class CNBC",
     "online": true,
     "status_code": 200
@@ -498,14 +498,14 @@
   },
   {
     "chno": "716",
-    "id": "RadioMonteCarloTV.it",
+    "id": "Radio Monte Carlo",
     "name": "Radio Montecarlo TV",
     "online": true,
     "status_code": 200
   },
   {
     "chno": "717",
-    "id": "VirginRadioTV.it",
+    "id": "Virgin Radio",
     "name": "Virgin Radio TV",
     "online": true,
     "status_code": 200
