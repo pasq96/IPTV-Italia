@@ -45,8 +45,10 @@ Il file `epg.xml.gz` è prodotto ogni giorno dal workflow [Build Merged EPG](./.
 |---|---|
 | [epgitalia.tv](https://www.epgitalia.tv) (`/gzip`) | guida completa dei canali nazionali (Rai, Mediaset, Sky, Warner…) |
 | [open-epg.com](https://www.open-epg.com) (`italy9.xml.gz`) | palinsesti Warner/Discovery e radio TV assenti in epgitalia |
+| [open-epg.com](https://www.open-epg.com) (`italy3.xml.gz`) | fallback per QVC, Donna TV, Radio 105 TV |
+| [open-epg.com](https://www.open-epg.com) (`italy2.xml.gz`) | fallback per Rai 4K, RDS Social TV |
 
-Il merge tiene solo i canali presenti nella playlist e riscrive gli id sui rispettivi `tvg-id`, così una sola sorgente EPG copre tutti i canali che hanno palinsesto disponibile. Attualmente **59 canali su 76** ricevono la guida; restano senza EPG (nessuna delle due sorgenti li pubblica): `QVC`, `Donna TV`, `Radio 105 TV`, `BOM Channel`, `Radio Ibiza TV`, `Camera dei Deputati`, `Radio Kiss Kiss TV`, `Rai 4K`, `RTL 102.5 Napulè`, `Radio24`, `RDS Social TV`, `Radio Zeta`, `Radio Capital TV`, `M2O TV`, `Rai Italia`, `Mediaset Italia`, `Radio TV Serie A`.
+Il merge tiene solo i canali presenti nella playlist e riscrive gli id sui rispettivi `tvg-id`, così una sola sorgente EPG copre tutti i canali che hanno palinsesto disponibile. I tre feed di **Mediaset Italia** (America, Australia e Asia, Europa e Africa) hanno `tvg-id` distinti e quindi una guida separata. Attualmente **67 canali su 78** ricevono la guida; restano senza EPG (nessuna sorgente li pubblica): `BOM Channel`, `Radio Ibiza TV`, `Camera dei Deputati`, `Radio Kiss Kiss TV`, `RTL 102.5 Napulè`, `Radio24`, `Radio Zeta`, `Radio Capital TV`, `M2O TV`, `Rai Italia`, `Radio TV Serie A`.
 
 ---
 

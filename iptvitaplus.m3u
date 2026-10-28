@@ -236,13 +236,13 @@ https://d3k8wzt41aflvx.cloudfront.net/RAISA/Live.m3u8
 #EXTINF:-1 tvg-chno="804" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/raiworldpremium.png" group-title="Rai",Rai World Premium
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/RAIP/Live.m3u8
-#EXTINF:-1 tvg-chno="805" tvg-id="Mediaset.Italia.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetitalia.png" group-title="Mediaset",Mediaset Italia - America
+#EXTINF:-1 tvg-chno="805" tvg-id="Mediaset.Italia.-.America.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetitalia.png" group-title="Mediaset",Mediaset Italia - America
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/MediasetUSA/Live.m3u8
-#EXTINF:-1 tvg-chno="806" tvg-id="Mediaset.Italia.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetitalia.png" group-title="Mediaset",Mediaset Italia - Australia e Asia
+#EXTINF:-1 tvg-chno="806" tvg-id="Mediaset.Italia.-.Australia.e.Asia.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetitalia.png" group-title="Mediaset",Mediaset Italia - Australia e Asia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/Mediaset_AU/Live.m3u8
-#EXTINF:-1 tvg-chno="807" tvg-id="Mediaset.Italia.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetitalia.png" group-title="Mediaset",Mediaset Italia - Europa e Africa
+#EXTINF:-1 tvg-chno="807" tvg-id="Mediaset.Italia.-.Europa.e.Africa.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/mediasetitalia.png" group-title="Mediaset",Mediaset Italia - Europa e Africa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; U; HbbTV/1.7.1; SmartTV; CE-HTML/1.0) AppleWebKit/537.36 (KHTML, like Gecko)
 https://d3k8wzt41aflvx.cloudfront.net/MediasetEU/Live.m3u8
 #EXTINF:-1 tvg-chno="899" tvg-id="RadioTVSerieA.it" tvg-logo="https://cdn.jsdelivr.net/gh/pasq96/IPTV-Italia/logos/radiotvseriea.png" group-title="Radio",Radio TV Serie A

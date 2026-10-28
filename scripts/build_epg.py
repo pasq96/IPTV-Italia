@@ -3,7 +3,8 @@
 
 Sorgenti:
   * epgitalia.tv  -> guida completa per la maggior parte dei canali italiani
-  * open-epg.com  -> palinsesti Warner/Discovery e radio TV assenti in epgitalia
+  * open-epg.com  -> palinsesti Warner/Discovery, radio TV e canali minori
+                     assenti in epgitalia (italy9, italy3, italy2)
 
 Il file prodotto (epg.xml.gz) contiene solo i canali presenti nella playlist,
 con gli id riscritti sui tvg-id della playlist stessa, cosi' il player deve
@@ -20,15 +21,24 @@ import urllib.request
 from pathlib import Path
 
 PRIMARY_URL = "https://www.epgitalia.tv/gzip"
-SECONDARY_URL = "https://www.open-epg.com/files/italy9.xml.gz"
+
+# Sorgenti di fallback, in ordine di priorita': la prima che ha programmi
+# per un canale scoperto vince.
+FALLBACK_SOURCES = [
+    ("italy9", "https://www.open-epg.com/files/italy9.xml.gz", "openepg-italy9.xml.gz"),
+    ("italy3", "https://www.open-epg.com/files/italy3.xml.gz", "openepg-italy3.xml.gz"),
+    ("italy2", "https://www.open-epg.com/files/italy2.xml.gz", "openepg-italy2.xml.gz"),
+]
+
 USER_AGENT = "IPTV-Italia-EPG-Builder/1.0 (+https://github.com/pasq96/IPTV-Italia)"
 
 PLAYLIST = Path("iptvitaplus.m3u")
 OUTPUT = Path("epg.xml.gz")
 CACHE_DIR = Path(".epg-cache")
 
-# tvg-id playlist -> id canale nella sorgente secondaria.
-# Servono solo per i canali che epgitalia non copre (0 programmi).
+# tvg-id playlist -> id canale nella sorgente di fallback.
+# Servono solo per i canali che epgitalia non copre (0 programmi) e per
+# evitare abbinamenti ambigui.
 OVERRIDES = {
     "NOVE": "Nove.it",
     "Real Time": "Real.Time.it",
@@ -43,6 +53,17 @@ OVERRIDES = {
     "Virgin Radio": "Virgin.Radio.it",
     "Radio Monte Carlo": "RMC.it",
     "SportitaliaSolocalcio.it": "Solocalcio.it.it",
+    # recuperati da italy3
+    "QVC": "QVC.it",
+    "DonnaTV.it": "DonnaTv.it",
+    "Radio.105.it": "Radio 105.it",
+    # recuperati da italy2
+    "Rai4K.it": "Rai 4K.it",
+    "RDSSocialTV.it": "Rds Social Tv.it",
+    # Mediaset Italia: tre feed distinti, con tvg-id dedicati nella playlist
+    "Mediaset.Italia.-.America.it": "Mediaset.Italia.-.America.it",
+    "Mediaset.Italia.-.Australia.e.Asia.it": "Mediaset.Italia.-.Australia.e.Asia.it",
+    "Mediaset.Italia.-.Europa.e.Africa.it": "Mediaset.Italia.-.Europa.e.Africa.it",
 }
 
 CHANNEL_RE = re.compile(r'<channel\s+id="([^"]+)"')
@@ -185,7 +206,7 @@ def collect(path: Path, wanted: dict[str, str]) -> tuple[list[str], list[str]]:
     return channels, programmes
 
 
-def pick_secondary_id(tvg_id: str, counts: dict[str, int], names: dict[str, set[str]]) -> str | None:
+def pick_fallback_id(tvg_id: str, counts: dict[str, int], names: dict[str, set[str]]) -> str | None:
     if tvg_id in OVERRIDES:
         candidate = OVERRIDES[tvg_id]
         return candidate if counts.get(candidate, 0) > 0 else None
@@ -213,26 +234,23 @@ def build() -> int:
     log(f"[playlist] {len(ids)} tvg-id")
 
     primary_path = download(PRIMARY_URL, "epgitalia.xml.gz")
-    try:
-        secondary_path = download(SECONDARY_URL, "openepg-italy9.xml.gz")
-    except Exception as exc:  # noqa: BLE001 - la sorgente secondaria e' opzionale
-        log(f"[warn] sorgente secondaria non disponibile: {exc}")
-        secondary_path = None
-
     primary_counts, primary_names = index_source(primary_path)
     log(f"[epgitalia] {sum(primary_counts.values())} programmi, {len(primary_counts)} canali")
 
-    secondary_counts: dict[str, int] = {}
-    secondary_names: dict[str, set[str]] = {}
-    if secondary_path is not None:
-        secondary_counts, secondary_names = index_source(secondary_path)
-        log(
-            f"[open-epg] {sum(secondary_counts.values())} programmi, "
-            f"{len(secondary_counts)} canali"
+    fallbacks: list[dict] = []
+    for label, url, filename in FALLBACK_SOURCES:
+        try:
+            path = download(url, filename)
+        except Exception as exc:  # noqa: BLE001 - le sorgenti di fallback sono opzionali
+            log(f"[warn] sorgente {label} non disponibile: {exc}")
+            continue
+        counts, names = index_source(path)
+        log(f"[{label}] {sum(counts.values())} programmi, {len(counts)} canali")
+        fallbacks.append(
+            {"label": label, "path": path, "counts": counts, "names": names, "wanted": {}}
         )
 
     primary_wanted: dict[str, str] = {}
-    secondary_wanted: dict[str, str] = {}
     source_of: dict[str, str] = {}
 
     for tvg_id in ids:
@@ -240,12 +258,12 @@ def build() -> int:
             primary_wanted[tvg_id] = tvg_id
             source_of[tvg_id] = "epgitalia"
             continue
-        if secondary_path is None:
-            continue
-        secondary_id = pick_secondary_id(tvg_id, secondary_counts, secondary_names)
-        if secondary_id:
-            secondary_wanted[secondary_id] = tvg_id
-            source_of[tvg_id] = f"open-epg:{secondary_id}"
+        for source in fallbacks:
+            fallback_id = pick_fallback_id(tvg_id, source["counts"], source["names"])
+            if fallback_id:
+                source["wanted"][fallback_id] = tvg_id
+                source_of[tvg_id] = f"{source['label']}:{fallback_id}"
+                break
 
     channels: list[str] = []
     programmes: list[str] = []
@@ -253,8 +271,10 @@ def build() -> int:
         ch, pr = collect(primary_path, primary_wanted)
         channels.extend(ch)
         programmes.extend(pr)
-    if secondary_wanted:
-        ch, pr = collect(secondary_path, secondary_wanted)
+    for source in fallbacks:
+        if not source["wanted"]:
+            continue
+        ch, pr = collect(source["path"], source["wanted"])
         channels.extend(ch)
         programmes.extend(pr)
 
